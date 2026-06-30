@@ -175,6 +175,32 @@ function parseAnalysisPayload(rawText: string): {
   return parsed;
 }
 
+function fallbackAnalysis(input: VideoAnalysisInput): VideoAnalysisResult {
+  const baseDivision: DetectedDivision = {
+    tipo: input.pricingMode === "restaurante" ? "Sala" : input.pricingMode === "escritorio" ? "Escritorio" : "Sala",
+    nivel_sujidade: "Médio",
+    tamanho: "Médio",
+    itens_detectados: [],
+    observacoes: input.notes || "Analise automatica sem visao por IA."
+  };
+
+  if (input.pricingMode === "tipologia" && input.tipologia === "t4") {
+    return {
+      divisoes: [baseDivision],
+      reviewRequired: true,
+      observations: ["Sem chave OpenAI configurada. T4 requer revisao manual."],
+      raw: { source: "fallback", reason: "OPENAI_API_KEY_NOT_CONFIGURED" }
+    };
+  }
+
+  return {
+    divisoes: [baseDivision],
+    reviewRequired: true,
+    observations: ["Sem chave OpenAI configurada. Orçamento gerado com análise interna e marcado para revisão."],
+    raw: { source: "fallback", reason: "OPENAI_API_KEY_NOT_CONFIGURED" }
+  };
+}
+
 export async function analisarVideo(
   input: VideoAnalysisInput,
   options: {
@@ -184,7 +210,7 @@ export async function analisarVideo(
   }
 ): Promise<VideoAnalysisResult> {
   if (!options.apiKey) {
-    throw new Error("OPENAI_API_KEY_REQUIRED");
+    return fallbackAnalysis(input);
   }
 
   const samples = await extractFrames(input.videoPath, options.sampleCount);
