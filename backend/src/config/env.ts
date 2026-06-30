@@ -17,6 +17,17 @@ const optionalTrimmedString = z.preprocess(
   z.string().min(1).optional()
 );
 
+const booleanFromEnv = (defaultValue: boolean) =>
+  z.preprocess((value) => {
+    if (typeof value === "boolean") return value;
+    if (typeof value !== "string") return value ?? defaultValue;
+
+    const normalized = value.trim().toLowerCase();
+    if (["1", "true", "yes", "on"].includes(normalized)) return true;
+    if (["0", "false", "no", "off"].includes(normalized)) return false;
+    return value;
+  }, z.boolean().default(defaultValue));
+
 const envSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
   PORT: z.coerce.number().int().positive().default(4000),
@@ -26,6 +37,8 @@ const envSchema = z.object({
   JWT_ACCESS_EXPIRES_IN: z.string().default("15m"),
   JWT_REFRESH_EXPIRES_IN: z.string().default("30d"),
   CORS_ORIGIN: z.string().trim().default("http://localhost:5500"),
+  DATABASE_SSL: booleanFromEnv(false),
+  DATABASE_SSL_REJECT_UNAUTHORIZED: booleanFromEnv(true),
   SHARED_ORGANIZATION_NAME: z.string().trim().default("Shared Workspace"),
   OPENAI_API_KEY: optionalTrimmedString,
   OPENAI_MODEL: z.string().trim().default("gpt-5.5"),
