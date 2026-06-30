@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: crmdn-crm
+    env: node
+    rootDir: backend
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGIN
+        value: https://crmdn-crm.onrender.com
+      - key: SHARED_ORGANIZATION_NAME
+        value: Shared Workspace
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_ACCESS_SECRET
+        sync: false
+      - key: JWT_REFRESH_SECRET
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.5
+      - key: OPENAI_VIDEO_FRAME_COUNT
+        value: "6"

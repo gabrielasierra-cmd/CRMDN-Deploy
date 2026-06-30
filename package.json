@@ -1,0 +1,15 @@
+{
+    "name":  "crmdn",
+    "private":  true,
+    "version":  "1.0.0",
+    "description":  "CRM monorepo runner",
+    "scripts":  {
+                    "dev":  "node scripts/dev.js",
+                    "dev:frontend":  "node scripts/frontend-server.js",
+                    "stop":  "node scripts/stop.js",
+                    "status":  "node scripts/status.js",
+                    "db:backup": "node scripts/db-backup.js",
+                    "db:backups": "node scripts/db-backups.js",
+                    "db:restore": "node scripts/db-restore.js"
+                }
+}

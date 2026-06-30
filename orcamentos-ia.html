@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orçamentos IA | D&N Clean Solutions</title>
+  <link rel="stylesheet" href="style.css?v=20260630a">
+</head>
+<body>
+  <div class="layout dashboard-mode">
+    <aside class="dash-sidebar">
+      <div class="logo-card">
+        <img src="logo.jpg.jpg" alt="Logo D&N">
+        <div class="logo-name">D&N</div>
+        <div class="logo-sub">CLEAN SOLUTIONS</div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html?v=20260630b">Dashboard</a>
+        <a href="clientes.html?v=20260630b">Clientes</a>
+        <a href="servicos.html">Servicos</a>
+        <a href="pagamentos.html">Pagamentos</a>
+        <a href="gastos.html">Gastos</a>
+        <a href="salarios.html">Funcionarios</a>
+        <a href="frequencia-horaria.html">Frequencia Horaria</a>
+        <a href="folgas.html">Folgas & Extras</a>
+        <a href="materiais.html">Materiais</a>
+        <a class="active" href="orcamentos-ia.html">Orçamentos IA</a>
+        <a href="planos.html">Planos</a>
+      </nav>
+      <div class="toolbar">
+        <button id="refreshBtn" class="secondary" type="button">Atualizar</button>
+        <button id="logoutBtn" class="danger" type="button">Logout</button>
+      </div>
+    </aside>
+
+    <main class="dash-main dashboard-shell budget-ai-shell">
+      <header class="dash-top dashboard-top">
+        <div class="dashboard-title-block">
+          <div class="dashboard-kicker">IA DE ORÇAMENTOS</div>
+          <h1>Orçamentos por vídeo</h1>
+          <p>Análise automática do espaço, cálculo com regras oficiais e geração de Word.</p>
+        </div>
+        <div class="dashboard-top-actions">
+          <button id="refreshQuotesBtn" class="secondary" type="button">Atualizar lista</button>
+        </div>
+      </header>
+
+      <div id="mainFeedback" class="dashboard-alert" hidden>
+        <span id="dashboardAlertText"></span>
+        <button id="dashboardAlertAction" type="button">Atualizar</button>
+      </div>
+
+      <section class="card budget-ai-card">
+        <div class="dashboard-section-head">
+          <div>
+            <h2>Novo orçamento</h2>
+            <div class="muted">Carrega o vídeo, escolhe o cliente e define o modo de precificação.</div>
+          </div>
+        </div>
+
+        <div class="budget-ai-form-grid">
+          <label class="budget-ai-field">
+            <span>Cliente</span>
+            <select id="clientSelect"></select>
+          </label>
+          <label class="budget-ai-field">
+            <span>Modo de precificação</span>
+            <select id="pricingMode">
+              <option value="divisoes">Divisoes oficiais</option>
+              <option value="tipologia">Tipologia T0/T1/T2/T3/T4</option>
+              <option value="pos_obra">Pos-obra</option>
+              <option value="restaurante">Restaurante</option>
+              <option value="escritorio">Escritorio</option>
+            </select>
+          </label>
+          <label class="budget-ai-field budget-ai-span-2">
+            <span>Video</span>
+            <input id="videoInput" type="file" accept="video/*">
+          </label>
+          <label class="budget-ai-field budget-ai-span-2">
+            <span>Notas</span>
+            <input id="notesInput" type="text" placeholder="Ex.: acesso dificil, muita gordura, cozinha industrial">
+          </label>
+        </div>
+
+        <div id="pricingOptions" class="budget-ai-options">
+          <div class="budget-ai-option-group" data-mode="tipologia">
+            <label class="budget-ai-field">
+              <span>Tipologia</span>
+              <select id="tipologiaSelect">
+                <option value="t0_t1_t2_normal">T0/T1/T2 normal</option>
+                <option value="t0_t1_t2_profunda">T0/T1/T2 profunda</option>
+                <option value="t3">T3</option>
+                <option value="t4">T4</option>
+              </select>
+            </label>
+          </div>
+          <div class="budget-ai-option-group" data-mode="pos_obra">
+            <label class="budget-ai-field">
+              <span>Horas estimadas</span>
+              <input id="hoursInput" type="number" min="0" step="0.5" placeholder="Ex.: 4">
+            </label>
+            <label class="budget-ai-field">
+              <span>Número de funcionários</span>
+              <input id="workersInput" type="number" min="1" step="1" placeholder="Ex.: 2">
+            </label>
+          </div>
+          <div class="budget-ai-option-group" data-mode="escritorio">
+            <label class="budget-ai-field">
+              <span>Área m²</span>
+              <input id="areaInput" type="number" min="1" step="1" placeholder="Ex.: 25">
+            </label>
+            <label class="budget-ai-field">
+              <span>Andares</span>
+              <input id="floorsInput" type="number" min="1" step="1" placeholder="Ex.: 3">
+            </label>
+          </div>
+          <div class="budget-ai-option-group" data-mode="restaurante">
+            <div class="budget-ai-note">Para restaurantes, a IA analisa gordura, cozinha industrial, equipamentos e necessidade de pós-obra.</div>
+          </div>
+        </div>
+
+        <div class="budget-ai-actions">
+          <button id="analyzeBtn" class="primary" type="button">Analisar vídeo</button>
+          <button id="approveBtn" class="secondary" type="button" disabled>Aprovar e gerar fatura</button>
+          <button id="downloadQuoteBtn" class="secondary" type="button" disabled>Descarregar orçamento</button>
+          <button id="downloadInvoiceBtn" class="secondary" type="button" disabled>Descarregar fatura</button>
+        </div>
+      </section>
+
+      <section class="card budget-ai-card">
+        <div class="dashboard-section-head">
+          <div>
+            <h2>Resultado da análise</h2>
+            <div class="muted" id="analysisSummary">Aguardando vídeo.</div>
+          </div>
+          <div id="analysisBadges" class="dashboard-pending-summary"></div>
+        </div>
+        <div class="budget-ai-result-grid">
+          <div class="budget-ai-summary">
+            <div class="budget-ai-summary-item">
+              <span>Total estimado</span>
+              <strong id="totalEstimated">0,00 €</strong>
+            </div>
+            <div class="budget-ai-summary-item">
+              <span>Estado</span>
+              <strong id="quoteStatus">-</strong>
+            </div>
+            <div class="budget-ai-summary-item">
+              <span>Orçamento</span>
+              <strong id="quoteNumber">-</strong>
+            </div>
+            <div class="budget-ai-summary-item">
+              <span>Fatura</span>
+              <strong id="invoiceNumber">-</strong>
+            </div>
+          </div>
+          <div class="budget-ai-json">
+            <pre id="analysisJson">Sem dados para mostrar.</pre>
+          </div>
+        </div>
+        <div class="budget-ai-table-wrap">
+          <table class="budget-ai-table">
+            <thead>
+              <tr>
+                <th>Divisao</th>
+                <th>Sujidade</th>
+                <th>Tamanho</th>
+                <th>Itens</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody id="divisionTableBody">
+              <tr><td colspan="5">Sem analise carregada.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card budget-ai-card">
+        <div class="dashboard-section-head">
+          <div>
+            <h2>Registos recentes</h2>
+            <div class="muted">Orçamentos recentes gerados neste CRM.</div>
+          </div>
+        </div>
+        <div id="quotesList" class="budget-ai-history"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="frontend/js/api.js?v=20260420a"></script>
+  <script src="frontend/js/client-seed.js?v=20260630a"></script>
+  <script src="auth-session.js"></script>
+  <script src="orcamentos-ia.js?v=20260630a"></script>
+</body>
+</html>

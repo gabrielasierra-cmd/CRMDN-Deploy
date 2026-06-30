@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedido de Serviço | D&N Clean Solutions</title>
+  <link rel="stylesheet" href="style.css?v=20260304a">
+</head>
+<body class="service-request-page">
+  <main class="service-request-shell">
+    <section class="service-request-card">
+      <header class="service-request-head">
+        <div>
+          <h1>Pedido de Serviço</h1>
+          <p class="muted">Preencha os dados e a nossa equipa entra em contacto.</p>
+        </div>
+        <div class="toolbar service-request-head-actions">
+          <button id="logoutBtn" type="button" class="danger" hidden>Logout</button>
+        </div>
+      </header>
+
+      <form id="publicServiceRequestForm" class="service-request-form">
+        <div class="row">
+          <input id="reqName" required placeholder="Nome completo">
+          <input id="reqPhone" required placeholder="Telefone/WhatsApp">
+        </div>
+        <div class="row">
+          <input id="reqEmail" type="email" placeholder="Email (opcional)">
+          <select id="reqType" required>
+            <option value="residencial">Residencial</option>
+            <option value="comercial">Comercial</option>
+            <option value="pos_obra">Pós-obra</option>
+          </select>
+        </div>
+        <input id="reqAddress" required placeholder="Morada">
+        <div class="row">
+          <input id="reqDate" type="date" required>
+          <select id="reqShift">
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+          </select>
+        </div>
+        <textarea id="reqNotes" placeholder="Observações (ex: nº de quartos, urgência, extras)"></textarea>
+        <button type="submit">Enviar pedido</button>
+      </form>
+
+      <div id="publicRequestFeedback" class="feedback" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="frontend/js/api.js?v=20260605a"></script>
+  <script src="crm-common.js"></script>
+  <script src="pedido-servico.js"></script>
+</body>
+</html>

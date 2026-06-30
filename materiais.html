@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Materiais | D&N Clean Solutions</title>
+  <link rel="stylesheet" href="style.css?v=20260602a">
+</head>
+<body>
+  <div class="layout dashboard-mode">
+    <aside class="dash-sidebar">
+      <div class="logo-card">
+        <img src="logo.jpg.jpg" alt="Logo D&N">
+        <div class="logo-name">D&N</div>
+        <div class="logo-sub">CLEAN SOLUTIONS</div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html?v=20260630b">Dashboard</a>
+        <a href="clientes.html?v=20260630b">Clientes</a>
+        <a href="servicos.html">Servicos</a>
+        <a href="pagamentos.html">Pagamentos</a>
+        <a href="gastos.html">Gastos</a>
+        <a href="salarios.html">Funcionarios</a>
+        <a href="frequencia-horaria.html">Frequencia Horaria</a>
+        <a href="folgas.html">Folgas & Extras</a>
+        <a class="active" href="materiais.html">Materiais</a>
+        <a href="planos.html">Planos</a>
+        <a href="orcamentos-ia.html">Orcamentos IA</a>
+      </nav>
+      <div class="toolbar">
+        <button id="logoutBtn" class="danger">Logout</button>
+      </div>
+    </aside>
+
+    <main class="dash-main materials-page">
+      <header class="dash-top simple-top materials-top">
+        <div class="clock-pill materials-clock">
+          <strong>Materiais</strong>
+          <span id="sessionInfo" class="muted"></span>
+        </div>
+      </header>
+
+      <div id="mainFeedback" class="feedback"></div>
+
+      <section class="materials-hero card">
+        <div class="materials-hero-copy">
+          <div class="materials-kicker">CONTROLO SIMPLES DE STOCK</div>
+          <h1>Produtos de limpeza por categoria, sem complicações.</h1>
+          <p>
+            Organiza o stock por categoria, regista entradas e saídas em poucos segundos e vê logo o que está abaixo do mínimo.
+          </p>
+        </div>
+        <div class="materials-summary-grid">
+          <article class="summary-card">
+            <span>Produtos</span>
+            <strong id="statProducts">0</strong>
+          </article>
+          <article class="summary-card">
+            <span>Stock total</span>
+            <strong id="statStock">0</strong>
+          </article>
+          <article class="summary-card critical">
+            <span>Abaixo do minimo</span>
+            <strong id="statLowStock">0</strong>
+          </article>
+          <article class="summary-card">
+            <span>Entradas / Saidas</span>
+            <strong id="statFlow">0 / 0</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="materials-workspace">
+        <article class="card materials-form-card">
+          <div class="card-head">
+            <div>
+              <h3>Novo produto</h3>
+              <div class="muted">Cria o produto já com a categoria certa.</div>
+            </div>
+          </div>
+          <form id="materialForm" class="materials-form">
+            <div class="form-grid materials-form-grid">
+              <label>
+                <span>Categoria</span>
+                <select id="mCategory" required></select>
+              </label>
+              <label>
+                <span>Produto</span>
+                <input id="mName" required placeholder="Ex: Detergente multiusos">
+              </label>
+              <label>
+                <span>Unidade</span>
+                <input id="mUnit" placeholder="un, l, caixa, pack">
+              </label>
+              <label>
+                <span>Quantidade atual</span>
+                <input id="mStock" type="number" min="0" step="0.01" required placeholder="0">
+              </label>
+              <label>
+                <span>Quantidade minima</span>
+                <input id="mMin" type="number" min="0" step="0.01" required placeholder="0">
+              </label>
+              <label>
+                <span>Uso medio mensal</span>
+                <input id="mUse" type="number" min="0" step="0.01" placeholder="Opcional">
+              </label>
+            </div>
+            <button type="submit">Guardar produto</button>
+          </form>
+        </article>
+
+        <article class="card materials-form-card">
+          <div class="card-head">
+            <div>
+              <h3>Entrada / Saida</h3>
+              <div class="muted">Regista movimentos rápidos sem depender do histórico por datas.</div>
+            </div>
+          </div>
+          <form id="movementForm" class="materials-form">
+            <div class="form-grid materials-form-grid">
+              <label>
+                <span>Produto</span>
+                <select id="moveMaterial" required></select>
+              </label>
+              <label>
+                <span>Tipo de movimento</span>
+                <select id="moveType" required>
+                  <option value="in">Entrada</option>
+                  <option value="out">Saida</option>
+                </select>
+              </label>
+              <label>
+                <span>Quantidade</span>
+                <input id="moveQty" type="number" min="0.01" step="0.01" required placeholder="0">
+              </label>
+              <label>
+                <span>Data</span>
+                <input id="moveDate" type="date" required>
+              </label>
+            </div>
+            <label>
+              <span>Observacoes</span>
+              <input id="moveNote" placeholder="Opcional">
+            </label>
+            <div class="materials-form-actions">
+              <button type="submit">Registar movimento</button>
+              <button id="refreshBtn" type="button" class="secondary">Atualizar vista</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <section class="card materials-list-card">
+        <div class="materials-list-head">
+          <div>
+            <h3>Produtos por categoria</h3>
+            <div class="muted">A organização principal do inventário segue as categorias de uso real.</div>
+          </div>
+          <div class="materials-list-actions">
+            <select id="categoryFilter">
+              <option value="">Todas as categorias</option>
+            </select>
+            <select id="statusFilter">
+              <option value="all">Todos os estados</option>
+              <option value="critical">Abaixo do minimo</option>
+              <option value="attention">Quase no minimo</option>
+              <option value="normal">Ok</option>
+            </select>
+            <input id="searchFilter" type="search" placeholder="Pesquisar produto">
+          </div>
+        </div>
+        <div id="materialsGroups" class="materials-groups"></div>
+      </section>
+
+      <section class="card materials-log-card">
+        <div class="materials-list-head">
+          <div>
+            <h3>Movimentos recentes</h3>
+            <div class="muted">Últimas entradas e saídas registadas para conferência rápida.</div>
+          </div>
+        </div>
+        <div class="materials-table-wrap">
+          <table class="materials-log-table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Categoria</th>
+                <th>Produto</th>
+                <th>Tipo</th>
+                <th>Quantidade</th>
+                <th>Observacoes</th>
+              </tr>
+            </thead>
+            <tbody id="movesBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firebase-sync.js"></script>
+  <script src="frontend/js/api.js?v=20260424b"></script>
+  <script src="crm-common.js"></script>
+  <script src="auth-session.js"></script>
+  <script src="materiais.js?v=20260602a"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funcionarios | D&N Clean Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout dashboard-mode">
+    <aside class="dash-sidebar">
+      <div class="logo-card">
+        <img src="logo.jpg.jpg" alt="Logo D&N">
+        <div class="logo-name">D&N</div>
+        <div class="logo-sub">CLEAN SOLUTIONS</div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html?v=20260630b">Dashboard</a>
+        <a href="clientes.html?v=20260630b">Clientes</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="pagamentos.html">Pagamentos</a>
+        <a href="gastos.html">Gastos</a>
+        <a class="active" href="salarios.html">Funcionarios</a>
+        <a href="frequencia-horaria.html">Frequencia Horaria</a>
+        <a href="folgas.html">Folgas & Extras</a>
+        <a href="orcamentos-ia.html">Orcamentos IA</a>
+        <a href="materiais.html">Materiais</a>
+        <a href="planos.html">Planos</a>
+      </nav>
+      <div class="toolbar">
+        <button id="logoutBtn" class="danger">Logout</button>
+      </div>
+    </aside>
+
+    <main class="dash-main">
+      <header class="dash-top simple-top">
+        <div class="clock-pill">
+          <strong>Pagos de Salarios</strong>
+          <span id="sessionInfo" class="muted"></span>
+        </div>
+      </header>
+
+      <div id="mainFeedback" class="feedback"></div>
+
+      <div class="card salaries-card">
+        <div class="salaries-head">
+          <div>
+            <h3>Funcionarios</h3>
+            <div class="muted">Registo de pagamento de salarios por colaborador</div>
+          </div>
+          <div class="salaries-actions">
+            <button id="addSalaryRowBtn" type="button">Adicionar linha</button>
+            <button id="monthlyReportBtn" type="button" class="secondary">Relatorio mensal</button>
+            <button id="clearSalaryBtn" type="button" class="secondary">Limpar tudo</button>
+          </div>
+        </div>
+
+        <div class="salaries-summary">
+          <div>Total pago (filtro): <strong id="salaryTotalPaid">0,00 EUR</strong></div>
+          <div class="salaries-filters">
+            <select id="salaryMonthFilter">
+              <option value="">Todos os meses</option>
+            </select>
+            <select id="salaryEmployeeFilter">
+              <option value="">Todos os funcionarios</option>
+            </select>
+            <select id="salaryStatusFilter">
+              <option value="all">Todos</option>
+              <option value="pago">Pago</option>
+              <option value="pendente">Pendente</option>
+            </select>
+          </div>
+          <div class="muted">Pagos: <strong id="salaryPaidCount">0</strong> | Pendentes: <strong id="salaryPendingCount">0</strong></div>
+        </div>
+
+        <div class="salaries-table-wrap">
+          <table class="salaries-sheet">
+            <thead>
+              <tr>
+                <th>Mes</th>
+                <th>Funcionario</th>
+                <th>Salario Base</th>
+                <th>Extras</th>
+                <th>Deducoes</th>
+                <th>Total</th>
+                <th>Data Pagamento</th>
+                <th>Estado</th>
+                <th>Observacoes</th>
+                <th>Acoes</th>
+              </tr>
+            </thead>
+            <tbody id="salaryBody"></tbody>
+          </table>
+        </div>
+
+        <datalist id="employeeOptions"></datalist>
+      </div>
+      <div id="monthlyReportModal" class="report-modal" hidden>
+        <div class="report-modal-backdrop" data-report-close></div>
+        <section class="report-modal-panel" role="dialog" aria-modal="true" aria-labelledby="monthlyReportTitle">
+          <div class="report-modal-head">
+            <div>
+              <div class="muted">Relatorio mensal de salarios</div>
+              <h3 id="monthlyReportTitle">Relatorio</h3>
+              <div id="monthlyReportMeta" class="muted"></div>
+            </div>
+            <div class="report-modal-actions">
+              <button type="button" class="secondary" data-report-print>Imprimir</button>
+              <button type="button" data-report-close>Fechar</button>
+            </div>
+          </div>
+          <div id="monthlyReportStats" class="report-stats"></div>
+          <div class="report-table-wrap">
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>Mes</th>
+                  <th>Funcionario</th>
+                  <th>Salario Base</th>
+                  <th>Extras</th>
+                  <th>Deducoes</th>
+                  <th>Total</th>
+                  <th>Data Pagamento</th>
+                  <th>Estado</th>
+                  <th>Observacoes</th>
+                </tr>
+              </thead>
+              <tbody id="monthlyReportBody"></tbody>
+            </table>
+          </div>
+          <div id="monthlyReportFooter" class="report-footer muted"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="frontend/js/api.js?v=20260420a"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firebase-sync.js"></script>
+  <script src="crm-common.js"></script>
+  <script src="auth-session.js"></script>
+  <script src="salarios.js"></script>
+</body>
+</html>

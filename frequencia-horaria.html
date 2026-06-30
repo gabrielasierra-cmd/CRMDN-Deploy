@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequencia Horaria | D&N Clean Solutions</title>
+  <link rel="stylesheet" href="style.css?v=20260531a">
+</head>
+<body>
+  <div class="layout dashboard-mode">
+    <aside class="dash-sidebar">
+      <div class="logo-card">
+        <img src="logo.jpg.jpg" alt="Logo D&N">
+        <div class="logo-name">D&N</div>
+        <div class="logo-sub">CLEAN SOLUTIONS</div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html?v=20260630b">Dashboard</a>
+        <a href="clientes.html?v=20260630b">Clientes</a>
+        <a href="servicos.html">Servicos</a>
+        <a href="pagamentos.html">Pagamentos</a>
+        <a href="gastos.html">Gastos</a>
+        <a href="salarios.html">Funcionarios</a>
+        <a class="active" href="frequencia-horaria.html">Frequencia Horaria</a>
+        <a href="folgas.html">Folgas & Extras</a>
+        <a href="materiais.html">Materiais</a>
+        <a href="planos.html">Planos</a>
+        <a href="orcamentos-ia.html">Orcamentos IA</a>
+      </nav>
+      <div class="toolbar">
+        <button id="logoutBtn" class="danger">Logout</button>
+      </div>
+    </aside>
+
+    <main class="dash-main workhours-page">
+      <header class="dash-top simple-top">
+        <div class="clock-pill">
+          <strong>Frequencia Horaria</strong>
+          <span id="sessionInfo" class="muted"></span>
+        </div>
+      </header>
+
+      <div id="mainFeedback" class="feedback"></div>
+
+      <section class="workhours-kpi-grid">
+        <article class="workhours-kpi-card">
+          <span>Total horas</span>
+          <strong id="totalHoursValue">0,00h</strong>
+        </article>
+        <article class="workhours-kpi-card">
+          <span>Registos</span>
+          <strong id="recordsCountValue">0</strong>
+        </article>
+        <article class="workhours-kpi-card">
+          <span>Top trabalhador</span>
+          <strong id="topWorkerValue">-</strong>
+        </article>
+        <article class="workhours-kpi-card">
+          <span>Local mais usado</span>
+          <strong id="topLocationValue">-</strong>
+        </article>
+      </section>
+
+      <section class="card workhours-card">
+        <div class="workhours-head">
+          <div>
+            <h3>Registo de horas</h3>
+            <div class="muted">Usa os trabalhadores existentes e acompanha horas por local e por período.</div>
+          </div>
+          <div class="workhours-actions">
+            <button id="refreshBtn" type="button" class="secondary">Atualizar</button>
+            <button id="monthlyReportBtn" type="button" class="secondary">Relatorio mensal</button>
+            <button id="clearFiltersBtn" type="button" class="secondary">Limpar filtros</button>
+          </div>
+        </div>
+
+        <form id="workHourForm" class="workhours-form">
+          <div class="workhours-form-grid">
+            <select id="workHourWorker" required></select>
+            <input id="workHourDate" type="date" required>
+            <input id="workHourHours" type="number" min="0.25" step="0.25" placeholder="Horas trabalhadas" required>
+            <input id="workHourLocation" type="text" placeholder="Local de trabalho" required>
+          </div>
+          <div class="workhours-form-actions">
+            <button id="workHourSubmitBtn" type="submit">Registar horas</button>
+            <button id="workHourCancelBtn" type="button" class="secondary" hidden>Cancelar edicao</button>
+          </div>
+        </form>
+
+        <div class="workhours-summary-bar">
+          <div class="workhours-summary-pill">
+            <span>Trabalhadores</span>
+            <strong id="workersCountValue">0</strong>
+          </div>
+          <div class="workhours-summary-pill">
+            <span>Locais</span>
+            <strong id="locationsCountValue">0</strong>
+          </div>
+          <div class="workhours-summary-pill">
+            <span>Horas medias</span>
+            <strong id="averageHoursValue">0,00h</strong>
+          </div>
+        </div>
+
+        <div class="workhours-filters">
+          <select id="workerFilter">
+            <option value="">Todos os trabalhadores</option>
+          </select>
+          <input id="localFilter" type="text" placeholder="Filtrar por local">
+          <input id="startDateFilter" type="date">
+          <input id="endDateFilter" type="date">
+        </div>
+
+        <div class="workhours-filter-actions">
+          <button id="applyFiltersBtn" type="button" class="secondary">Aplicar filtros</button>
+        </div>
+
+        <div class="workhours-table-wrap">
+          <table class="workhours-sheet">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Trabalhador</th>
+                <th>Local</th>
+                <th>Horas</th>
+                <th>Acoes</th>
+              </tr>
+            </thead>
+            <tbody id="workHoursBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="workhours-analytics-grid">
+        <article class="card workhours-analysis-card">
+          <div class="workhours-section-head">
+            <div>
+              <h3>Ranking mensal por trabalhador</h3>
+              <div class="muted">Total de horas trabalhadas no periodo filtrado.</div>
+            </div>
+          </div>
+          <div class="workhours-table-wrap small">
+            <table class="workhours-mini-table">
+              <thead>
+                <tr>
+                  <th>Trabalhador</th>
+                  <th>Horas</th>
+                  <th>Registos</th>
+                </tr>
+              </thead>
+              <tbody id="workerRankingBody"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="card workhours-analysis-card">
+          <div class="workhours-section-head">
+            <div>
+              <h3>Horas por local</h3>
+              <div class="muted">Locais mais usados e carga acumulada.</div>
+            </div>
+          </div>
+          <div class="workhours-table-wrap small">
+            <table class="workhours-mini-table">
+              <thead>
+                <tr>
+                  <th>Local</th>
+                  <th>Horas</th>
+                  <th>Registos</th>
+                </tr>
+              </thead>
+              <tbody id="localTotalsBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="workhours-charts-grid">
+        <article class="card workhours-chart-card">
+          <div class="workhours-section-head">
+            <div>
+              <h3>Barras: horas por trabalhador</h3>
+              <div class="muted">Comparação visual entre colaboradores.</div>
+            </div>
+          </div>
+          <div id="workerChart" class="workhours-bar-chart"></div>
+        </article>
+
+        <article class="card workhours-chart-card">
+          <div class="workhours-section-head">
+            <div>
+              <h3>Barras: horas por local</h3>
+              <div class="muted">Onde a carga de trabalho se concentra.</div>
+            </div>
+          </div>
+          <div id="localChart" class="workhours-bar-chart"></div>
+        </article>
+      </section>
+
+      <section class="card workhours-heatmap-card">
+        <div class="workhours-section-head">
+          <div>
+            <h3>Heatmap: frequencia por local</h3>
+            <div class="muted">Intersecao entre trabalhador e local de trabalho.</div>
+          </div>
+        </div>
+        <div class="workhours-heatmap-wrap">
+          <div id="heatmapTable"></div>
+        </div>
+      </section>
+
+      <div id="monthlyReportModal" class="report-modal" hidden>
+        <div class="report-modal-backdrop" data-report-close></div>
+        <section class="report-modal-panel" role="dialog" aria-modal="true" aria-labelledby="monthlyReportTitle">
+          <div class="report-modal-head">
+            <div>
+              <div class="muted">Relatorio mensal de frequencia horaria</div>
+              <h3 id="monthlyReportTitle">Relatorio</h3>
+              <div id="monthlyReportMeta" class="muted"></div>
+            </div>
+            <div class="report-modal-actions">
+              <button type="button" class="secondary" data-report-print>Imprimir</button>
+              <button type="button" data-report-close>Fechar</button>
+            </div>
+          </div>
+          <div id="monthlyReportStats" class="report-stats"></div>
+          <div class="report-table-wrap">
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Trabalhador</th>
+                  <th>Local</th>
+                  <th>Horas</th>
+                </tr>
+              </thead>
+              <tbody id="monthlyReportBody"></tbody>
+            </table>
+          </div>
+          <div id="monthlyReportFooter" class="report-footer muted"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="frontend/js/api.js?v=20260531a"></script>
+  <script src="auth-session.js"></script>
+  <script src="crm-common.js"></script>
+  <script src="frequencia-horaria.js?v=20260531a"></script>
+</body>
+</html>

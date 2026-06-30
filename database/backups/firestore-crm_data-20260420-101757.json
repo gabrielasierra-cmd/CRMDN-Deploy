@@ -1,0 +1,2574 @@
+{
+  "exportedAt": "2026-04-20T09:17:57.229Z",
+  "docs": {
+    "cleaningServices": [
+      {
+        "priority": "media",
+        "id": "kkbex44105k",
+        "teamId": "db23ocyukr2",
+        "status": "agendado",
+        "startAt": "2026-03-03T09:00",
+        "clientId": "ogetwangtkk",
+        "durationHours": 3,
+        "type": "comercial",
+        "price": 106,
+        "extras": [
+          "Janelas"
+        ]
+      },
+      {
+        "startAt": "2026-03-13T22:53",
+        "status": "concluido",
+        "type": "residencial",
+        "durationHours": 2,
+        "clientId": "ogetwangtkk",
+        "price": 50,
+        "extras": [
+          "recordar"
+        ],
+        "priority": "media",
+        "id": "n6bakbrsrz9",
+        "teamId": "db23ocyukr2"
+      }
+    ],
+    "clients": [
+      {
+        "notes": "Limpeza diaria durante a manha.",
+        "id": "ogetwangtkk",
+        "address": "Restaurante",
+        "frequency": "semanal",
+        "contact": "-",
+        "serviceType": "comercial",
+        "name": "Bellano"
+      },
+      {
+        "id": "d0k92pxgtkk",
+        "notes": "Limpeza diaria durante a manha.",
+        "serviceType": "comercial",
+        "frequency": "semanal",
+        "contact": "-",
+        "address": "Restaurante",
+        "name": "Nortada"
+      },
+      {
+        "name": "Tokotai",
+        "serviceType": "comercial",
+        "contact": "-",
+        "frequency": "semanal",
+        "address": "Restaurante",
+        "notes": "Limpeza diaria durante a manha.",
+        "id": "4yyl3tlgtkk"
+      },
+      {
+        "id": "2worm05gtkk",
+        "notes": "Bar de vinhos.",
+        "serviceType": "comercial",
+        "address": "Wine bar",
+        "frequency": "semanal",
+        "contact": "-",
+        "name": "Bar Azul"
+      },
+      {
+        "id": "a76fv93gtkk",
+        "notes": "Bar de vinhos.",
+        "contact": "-",
+        "address": "Wine bar",
+        "frequency": "semanal",
+        "serviceType": "comercial",
+        "name": "Bar Stellar"
+      },
+      {
+        "address": "Discoteca",
+        "frequency": "semanal",
+        "contact": "-",
+        "serviceType": "comercial",
+        "name": "Plasctic",
+        "id": "c2vh1hngtkk",
+        "notes": "Servicos aos sabados e domingos."
+      },
+      {
+        "name": "ABF",
+        "serviceType": "comercial",
+        "frequency": "semanal",
+        "contact": "-",
+        "address": "Ginasio",
+        "id": "2ouq6fpgtkk",
+        "notes": "Sabados durante 3 horas."
+      },
+      {
+        "id": "nnzn0atgtkk",
+        "notes": "Limpeza semanal.",
+        "serviceType": "residencial",
+        "address": "Casa",
+        "contact": "-",
+        "frequency": "semanal",
+        "name": "Casa Semanal 1"
+      },
+      {
+        "serviceType": "residencial",
+        "address": "Casa",
+        "contact": "-",
+        "frequency": "semanal",
+        "name": "Casa Semanal 2",
+        "notes": "Limpeza semanal.",
+        "id": "n1ft7aygtkk"
+      },
+      {
+        "notes": "Limpeza duas vezes por mes.",
+        "id": "w7vbrybgtkk",
+        "name": "Casa Quinzenal",
+        "address": "Casa",
+        "frequency": "quinzenal",
+        "contact": "-",
+        "serviceType": "residencial"
+      },
+      {
+        "notes": "Frequencia variada.",
+        "id": "qanfn1lgtkk",
+        "serviceType": "comercial",
+        "frequency": "semanal",
+        "contact": "-",
+        "address": "Escritorio",
+        "name": "Escritorio Nortada"
+      },
+      {
+        "name": "Escritorio Ramalde",
+        "serviceType": "comercial",
+        "contact": "-",
+        "frequency": "quinzenal",
+        "address": "Escritorio",
+        "notes": "Frequencia variada.",
+        "id": "g43qiz4gtkk"
+      },
+      {
+        "contact": "-",
+        "address": "Escritorio",
+        "frequency": "mensal",
+        "serviceType": "comercial",
+        "name": "Escritorio Sao Mamade",
+        "notes": "Frequencia variada.",
+        "id": "vvbnuw4gtkk"
+      },
+      {
+        "id": "3urmaosgtkk",
+        "notes": "Frequencia variada.",
+        "serviceType": "comercial",
+        "frequency": "mensal",
+        "address": "Escritorio",
+        "contact": "-",
+        "name": "Escritorio Porto"
+      },
+      {
+        "id": "t91e6pngtkk",
+        "notes": "Uma vez por semana.",
+        "address": "Exterior",
+        "contact": "-",
+        "frequency": "semanal",
+        "serviceType": "comercial",
+        "name": "Patio Exterior"
+      },
+      {
+        "id": "ixosxo1iry4",
+        "notes": "36 panos",
+        "name": "lavanderia panos bar",
+        "serviceType": "comercial",
+        "contact": "-",
+        "frequency": "quinzenal",
+        "address": "-"
+      },
+      {
+        "id": "xgmiabl4v5w",
+        "notes": "Servico de lavandaria para bar.",
+        "name": "Lavanderia Bar",
+        "serviceType": "comercial",
+        "address": "Lavandaria",
+        "frequency": "semanal",
+        "contact": "-"
+      },
+      {
+        "name": "ABC EVENTO",
+        "contact": "9",
+        "frequency": "semanal",
+        "address": "rua sa de bandeira",
+        "serviceType": "comercial",
+        "notes": "evento usual",
+        "id": "kmqnh62dgrz"
+      },
+      {
+        "name": "t2 aprtamento",
+        "contact": "-",
+        "frequency": "semanal",
+        "address": "-",
+        "serviceType": "pos_obra",
+        "id": "0to7zwphca6",
+        "notes": ""
+      }
+    ],
+    "crm_users": [
+      {
+        "password": "123456",
+        "id": "uz5ybi5uyd2",
+        "email": "gabriela.rosero23@gmail.com"
+      }
+    ],
+    "employees": [
+      {
+        "name": "Sonia C.",
+        "offPolicy": "2 folgas rotativas por semana",
+        "locations": [
+          "Nortada",
+          "Bellano",
+          "Bar Azul"
+        ],
+        "workDays": [
+          "terca",
+          "quarta",
+          "quinta",
+          "sexta",
+          "sabado",
+          "domingo",
+          "segunda"
+        ],
+        "id": "oxhcj8jqs8e",
+        "defaultShift": "08:00-17:00"
+      },
+      {
+        "name": "Isabel P.",
+        "offPolicy": "Folga de segunda a sexta",
+        "locations": [
+          "Bar Wine",
+          "Plastic"
+        ],
+        "workDays": [
+          "sabado",
+          "domingo"
+        ],
+        "id": "u3vg9r4qs8e",
+        "defaultShift": "10:00-18:00"
+      },
+      {
+        "name": "Joao P.",
+        "offPolicy": "2 vezes por semana",
+        "locations": [
+          "Escritorio Funeraria"
+        ],
+        "workDays": [
+          "segunda",
+          "quinta"
+        ],
+        "id": "13yfs9ks6jt",
+        "defaultShift": "09:00-13:00"
+      },
+      {
+        "offPolicy": "Reforco nas folgas",
+        "name": "Narai S.",
+        "defaultShift": "Reforco",
+        "workDays": [
+          "conforme necessidade"
+        ],
+        "id": "ksce1prs6jt",
+        "locations": [
+          "Apoio geral"
+        ]
+      },
+      {
+        "locations": [
+          "Academia"
+        ],
+        "defaultShift": "3h",
+        "workDays": [
+          "sabado"
+        ],
+        "id": "ubo8sews6jt",
+        "name": "Dalila S.",
+        "offPolicy": "Turno parcial"
+      },
+      {
+        "name": "Julian F.",
+        "offPolicy": "Cobre folgas de Sonia",
+        "locations": [
+          "Academia"
+        ],
+        "workDays": [
+          "sabado"
+        ],
+        "id": "sb2zt0vtsvn",
+        "defaultShift": "3h"
+      },
+      {
+        "locations": [
+          "Stock",
+          "Sistemas"
+        ],
+        "workDays": [
+          "conforme necessidade"
+        ],
+        "id": "bj154qgtsvn",
+        "defaultShift": "Operacional",
+        "name": "Gabriela S.",
+        "offPolicy": "Cobre folgas"
+      },
+      {
+        "locations": [
+          "Administracao",
+          "Gestao"
+        ],
+        "defaultShift": "09:00-18:00",
+        "workDays": [
+          "segunda",
+          "terca",
+          "quarta",
+          "quinta",
+          "sexta"
+        ],
+        "id": "4z4f33ktsvn",
+        "name": "Loushiana S.",
+        "offPolicy": "Administrativa e gestao"
+      },
+      {
+        "locations": [
+          "Apoio geral"
+        ],
+        "defaultShift": "Reforco",
+        "workDays": [
+          "conforme necessidade"
+        ],
+        "id": "6y5z5e2tsvn",
+        "name": "Jeny S.",
+        "offPolicy": "Cobre folgas de Sonia"
+      },
+      {
+        "name": "Angie S.",
+        "offPolicy": "Apoio operacional",
+        "locations": [
+          "Apoio geral"
+        ],
+        "id": "rqrsmcindz9",
+        "workDays": [
+          "conforme necessidade"
+        ],
+        "defaultShift": "Reforco"
+      },
+      {
+        "defaultShift": "Reforco",
+        "workDays": [
+          "conforme necessidade"
+        ],
+        "id": "devncc5za0e",
+        "locations": [
+          "Apoio geral"
+        ],
+        "offPolicy": "Apoio operacional",
+        "name": "Jairo J."
+      },
+      {
+        "defaultShift": "Reforco",
+        "id": "0drmx8nbsyj",
+        "workDays": [
+          "conforme necessidade"
+        ],
+        "locations": [
+          "Apoio geral"
+        ],
+        "offPolicy": "Apoio operacional",
+        "name": "Samuel D."
+      }
+    ],
+    "expenses": [
+      {
+        "notes": "",
+        "id": "gaq6x2ey2l6",
+        "provider": "temu",
+        "presentation": "Fisico",
+        "quantity": 2,
+        "date": "2026-01-30",
+        "responsible": "Dalila",
+        "product": "Guantes",
+        "price": 2.94,
+        "invoiceNo": ""
+      },
+      {
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "id": "vn6dcnvy2l6",
+        "notes": "",
+        "responsible": "Dalila",
+        "product": "Escobaropa",
+        "price": 0.95,
+        "invoiceNo": "FT N.174",
+        "quantity": 1,
+        "date": "2026-01-13"
+      },
+      {
+        "invoiceNo": "",
+        "price": 2,
+        "product": "balde",
+        "responsible": "Dalila",
+        "date": "2026-01-30",
+        "quantity": 3,
+        "presentation": "Virtual",
+        "provider": "temu",
+        "id": "k9eds3zy2l6",
+        "notes": ""
+      },
+      {
+        "product": "balde",
+        "responsible": "Naray",
+        "invoiceNo": "",
+        "price": 3,
+        "quantity": 1,
+        "date": "2026-01-01",
+        "presentation": "Virtual",
+        "provider": "temu",
+        "id": "r7g517oy2l6",
+        "notes": ""
+      },
+      {
+        "id": "sgo28570g7u",
+        "notes": "",
+        "presentation": "Fisico",
+        "provider": "llavero",
+        "quantity": 1,
+        "date": "2026-03-02",
+        "product": "llave sonia",
+        "responsible": "naray",
+        "invoiceNo": "",
+        "price": 5
+      },
+      {
+        "provider": "desk space desing",
+        "presentation": "Fisico",
+        "notes": "",
+        "id": "fbwdxp8ps9k",
+        "responsible": "Dalila",
+        "product": "tshirts",
+        "price": 7.5,
+        "invoiceNo": "Nº92026/13",
+        "quantity": 10,
+        "date": "2026-02-16"
+      },
+      {
+        "product": "tshirts",
+        "responsible": "dalila(devolver dinero )",
+        "price": 52.5,
+        "invoiceNo": "",
+        "quantity": 1,
+        "date": "2026-03-04",
+        "provider": "desk space desing",
+        "presentation": "Fisico",
+        "notes": "",
+        "id": "t0ag2tqutox"
+      },
+      {
+        "notes": "",
+        "id": "o9e4i3z14u3",
+        "provider": "lerio",
+        "presentation": "Fisico",
+        "date": "2026-01-13",
+        "quantity": 6,
+        "price": 2.15,
+        "invoiceNo": "FT N.174",
+        "product": "PapelMultiusos",
+        "responsible": ""
+      },
+      {
+        "invoiceNo": "FT N.174",
+        "price": 1.27,
+        "responsible": "",
+        "product": "Ambientadores",
+        "date": "2026-01-13",
+        "quantity": 6,
+        "provider": "lerio",
+        "presentation": "Fisico",
+        "notes": "",
+        "id": "astyybp14u3"
+      },
+      {
+        "id": "0ynejja14u3",
+        "notes": "",
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "quantity": 1,
+        "date": "2026-01-13",
+        "responsible": "",
+        "product": "SacosLixo60l",
+        "invoiceNo": "FT N.174",
+        "price": 6.31
+      },
+      {
+        "responsible": "",
+        "product": "SacosLixo30l",
+        "invoiceNo": "FT N.174",
+        "price": 1.81,
+        "quantity": 1,
+        "date": "2026-01-13",
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "id": "ny13gaj14u3",
+        "notes": ""
+      },
+      {
+        "date": "2026-01-13",
+        "quantity": 1,
+        "price": 15.3,
+        "invoiceNo": "FT N.174",
+        "responsible": "",
+        "product": "limpiaVidrios",
+        "notes": "",
+        "id": "p1tiz7j14u3",
+        "provider": "lerio",
+        "presentation": "Fisico"
+      },
+      {
+        "id": "reg1v1814u3",
+        "notes": "",
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "quantity": 4,
+        "date": "2026-01-13",
+        "responsible": "",
+        "product": "Panos",
+        "invoiceNo": "FT N.174",
+        "price": 0.98
+      },
+      {
+        "quantity": 1,
+        "date": "2026-01-13",
+        "responsible": "",
+        "product": "Brocha",
+        "price": 1.16,
+        "invoiceNo": "FT N.174",
+        "id": "iljo0dc14u3",
+        "notes": "",
+        "presentation": "Fisico",
+        "provider": "lerio"
+      },
+      {
+        "quantity": 3,
+        "date": "2026-01-13",
+        "responsible": "",
+        "product": "Esfregonas",
+        "invoiceNo": "FT N.174",
+        "price": 3.78,
+        "notes": "",
+        "id": "nwbbkqp14u3",
+        "provider": "lerio",
+        "presentation": "Fisico"
+      },
+      {
+        "provider": "lerio",
+        "presentation": "Fisico",
+        "notes": "",
+        "id": "wdy5y7m14u3",
+        "product": "Desentupidor",
+        "responsible": "",
+        "invoiceNo": "FT N.174",
+        "price": 2.82,
+        "quantity": 1,
+        "date": "2026-01-13"
+      },
+      {
+        "notes": "",
+        "id": "j7wtgy114u3",
+        "provider": "lerio",
+        "presentation": "Fisico",
+        "quantity": 1,
+        "date": "2026-01-13",
+        "product": "MultiusosPiso",
+        "responsible": "",
+        "invoiceNo": "FT N.174",
+        "price": 13.99
+      },
+      {
+        "id": "2bzkqt314u3",
+        "notes": "",
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "date": "2026-01-13",
+        "quantity": 1,
+        "price": 2.79,
+        "invoiceNo": "FT N.174",
+        "responsible": "",
+        "product": "GelDesinfectante"
+      },
+      {
+        "provider": "lerio",
+        "presentation": "Fisico",
+        "notes": "",
+        "id": "8l1xzir14u3",
+        "invoiceNo": "FT N.174",
+        "price": 1.49,
+        "responsible": "",
+        "product": "PatillasBanho",
+        "date": "2026-01-13",
+        "quantity": 3
+      },
+      {
+        "invoiceNo": "FT N.174",
+        "price": 3.06,
+        "responsible": "",
+        "product": "AparatoDeVidrios",
+        "date": "2026-01-13",
+        "quantity": 2,
+        "provider": "lerio",
+        "presentation": "Fisico",
+        "notes": "",
+        "id": "h58g1it14u3"
+      },
+      {
+        "quantity": 2,
+        "date": "2026-01-13",
+        "responsible": "",
+        "product": "CepillosSanitas",
+        "invoiceNo": "FT N.174",
+        "price": 1.82,
+        "id": "gcickym14u3",
+        "notes": "",
+        "presentation": "Fisico",
+        "provider": "lerio"
+      },
+      {
+        "id": "gvqtk6514u3",
+        "notes": "NO | cena staff",
+        "presentation": "Mbway",
+        "provider": "restaurante",
+        "date": "2025-11-16",
+        "quantity": 1,
+        "invoiceNo": "",
+        "price": 119.7,
+        "product": "Varios Staff",
+        "responsible": "Narai"
+      },
+      {
+        "quantity": 1,
+        "date": "2026-01-01",
+        "responsible": "Luciano",
+        "product": "Equipamentos",
+        "invoiceNo": "",
+        "price": 31.9,
+        "notes": "SI",
+        "id": "xj08iwx14u3",
+        "provider": "Temu",
+        "presentation": "TRFB"
+      },
+      {
+        "presentation": "Mbway",
+        "provider": "Cartones",
+        "id": "7wn00ki14u3",
+        "notes": "NO | Cartones empresa",
+        "product": "Varios Staff",
+        "responsible": "Dalila",
+        "price": 20,
+        "invoiceNo": "",
+        "quantity": 1,
+        "date": "2026-01-04"
+      },
+      {
+        "provider": "Uber",
+        "presentation": "Mbway",
+        "notes": "SI",
+        "id": "4r8i39i14u3",
+        "invoiceNo": "",
+        "price": 20,
+        "responsible": "Gabriela",
+        "product": "Transporte",
+        "date": "2026-01-17",
+        "quantity": 1
+      },
+      {
+        "quantity": 1,
+        "date": "2026-01-19",
+        "responsible": "Dalila",
+        "product": "Varios Staff",
+        "price": 45,
+        "invoiceNo": "",
+        "notes": "NO | bar azul pago el almuerzo",
+        "id": "ec6lmge14u3",
+        "provider": "Almuerzo BARAZUL",
+        "presentation": "Mbway"
+      },
+      {
+        "date": "2026-01-21",
+        "quantity": 1,
+        "invoiceNo": "",
+        "price": 10,
+        "product": "Varios Staff",
+        "responsible": "Narai",
+        "id": "u3k4doo14u3",
+        "notes": "NO | devolucionen pago de bellano a narai",
+        "presentation": "Mbway",
+        "provider": "Chaves caravalhido"
+      },
+      {
+        "date": "2026-01-30",
+        "quantity": 1,
+        "price": 26.39,
+        "invoiceNo": "",
+        "product": "Varios Staff",
+        "responsible": "Dalila",
+        "notes": "SI",
+        "id": "otvan6j14u3",
+        "provider": "temu",
+        "presentation": "TRFB"
+      },
+      {
+        "quantity": 1,
+        "date": "2025-11-01",
+        "product": "Varios Staff",
+        "responsible": "Dalila",
+        "price": 100,
+        "invoiceNo": "",
+        "notes": "NO | Anchetas",
+        "id": "8ftjbqk14u3",
+        "provider": "Continente",
+        "presentation": "Efectivo"
+      },
+      {
+        "presentation": "Mbway",
+        "provider": "Continente",
+        "id": "lmnvcvk14u3",
+        "notes": "NO | prsentes clientes",
+        "invoiceNo": "",
+        "price": 100,
+        "responsible": "Narai",
+        "product": "Varios Staff",
+        "date": "2025-11-15",
+        "quantity": 1
+      },
+      {
+        "notes": "",
+        "id": "bf491zgd618",
+        "provider": "lerio",
+        "presentation": "Fisico",
+        "date": "2026-01-13",
+        "quantity": 3,
+        "price": 4.47,
+        "invoiceNo": "FT N.174",
+        "responsible": "",
+        "product": "PatillasBanho"
+      },
+      {
+        "id": "y5urco5d618",
+        "notes": "",
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "quantity": 2,
+        "date": "2026-01-13",
+        "responsible": "",
+        "product": "AparatoDeVidrios",
+        "invoiceNo": "FT N.174",
+        "price": 6.12
+      },
+      {
+        "quantity": 1,
+        "date": "2026-01-13",
+        "responsible": "Dalila",
+        "product": "Productos",
+        "price": 114.65,
+        "invoiceNo": "FT.174",
+        "id": "cj52supw5ni",
+        "notes": "SI",
+        "presentation": "Mbway",
+        "provider": "lerio"
+      },
+      {
+        "notes": "",
+        "id": "ap06q49w7in",
+        "provider": "note",
+        "presentation": "Fisico",
+        "quantity": 1,
+        "date": "2026-03-01",
+        "product": "resma /",
+        "responsible": "dalila",
+        "invoiceNo": "",
+        "price": 11.87
+      },
+      {
+        "quantity": 1,
+        "date": "2025-09-01",
+        "product": "productos limpieza",
+        "responsible": "",
+        "invoiceNo": "",
+        "price": 79.2,
+        "id": "oixsbpe9bg8",
+        "notes": "",
+        "presentation": "Fisico",
+        "provider": "mercadona"
+      },
+      {
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "id": "2f9gjz6p5ka",
+        "notes": "",
+        "responsible": "Dalila",
+        "product": "Guantes",
+        "price": 5.69,
+        "invoiceNo": "FT N.174",
+        "quantity": 2,
+        "date": "2026-01-13"
+      },
+      {
+        "price": 12.9,
+        "invoiceNo": "FT N.174",
+        "product": "PapelMultiusos",
+        "responsible": "",
+        "date": "2026-01-13",
+        "quantity": 6,
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "id": "vogwpucp5ka",
+        "notes": ""
+      },
+      {
+        "responsible": "",
+        "product": "Ambientadores",
+        "invoiceNo": "FT N.174",
+        "price": 7.59,
+        "quantity": 6,
+        "date": "2026-01-13",
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "id": "300z1xhp5ka",
+        "notes": ""
+      },
+      {
+        "provider": "lerio",
+        "presentation": "Fisico",
+        "notes": "",
+        "id": "1rmlssmp5ka",
+        "invoiceNo": "FT N.174",
+        "price": 3.91,
+        "product": "Panos",
+        "responsible": "",
+        "date": "2026-01-13",
+        "quantity": 4
+      },
+      {
+        "responsible": "",
+        "product": "Esfregonas",
+        "price": 11.34,
+        "invoiceNo": "FT N.174",
+        "quantity": 3,
+        "date": "2026-01-13",
+        "provider": "lerio",
+        "presentation": "Fisico",
+        "notes": "",
+        "id": "m1kvod1p5ka"
+      },
+      {
+        "presentation": "Fisico",
+        "provider": "lerio",
+        "id": "hyl5onup5ka",
+        "notes": "",
+        "product": "CepillosSanitas",
+        "responsible": "",
+        "price": 3.64,
+        "invoiceNo": "FT N.174",
+        "quantity": 2,
+        "date": "2026-01-13"
+      },
+      {
+        "provider": "temu",
+        "presentation": "Virtual",
+        "notes": "",
+        "id": "mctngk5p5ka",
+        "invoiceNo": "",
+        "price": 6,
+        "responsible": "Dalila",
+        "product": "balde",
+        "date": "2026-01-30",
+        "quantity": 3
+      },
+      {
+        "quantity": 1,
+        "date": "2026-03-01",
+        "responsible": "dalila",
+        "product": "productos",
+        "invoiceNo": "955377",
+        "price": 12.02,
+        "notes": "",
+        "id": "igs0zmuij4p",
+        "provider": "continente",
+        "presentation": "Fisico"
+      },
+      {
+        "provider": "normal",
+        "presentation": "Fisico",
+        "notes": "devolver a gabriela",
+        "id": "t57tgxggzrx",
+        "responsible": "gabriela",
+        "product": "limpia carpertes",
+        "invoiceNo": "",
+        "price": 5.9,
+        "quantity": 1,
+        "date": "2026-04-01"
+      }
+    ],
+    "extraShifts": [
+      {
+        "id": "yabowl6u",
+        "employeeId": "oxhcj8jqs8e",
+        "hours": 1,
+        "date": "2026-02-25"
+      },
+      {
+        "id": "p33wz26b",
+        "employeeId": "ksce1prs6jt",
+        "hours": 1,
+        "date": "2026-02-25"
+      },
+      {
+        "date": "2026-02-25",
+        "id": "mzpmezr52x4",
+        "hours": 1,
+        "location": "bellani",
+        "note": "",
+        "employeeName": "Jeny S.",
+        "createdAt": 1772023670536,
+        "employeeId": "6y5z5e2tsvn"
+      }
+    ],
+    "invoices": [
+      {
+        "number": "DN-2026-0001",
+        "serviceId": "n6bakbrsrz9",
+        "amount": 50,
+        "issuedAt": "2026-03-04T10:37:30.827Z",
+        "status": "pendente",
+        "clientId": "ogetwangtkk",
+        "id": "mogpzmtkfuz"
+      }
+    ],
+    "material_distribution": [
+      {
+        "finalFormat": "1 litro",
+        "productAmount": "5 litros",
+        "date": "2026-01-13",
+        "product": "MultiusosPiso",
+        "responsible": "Gabriela",
+        "id": "q6ais7iadrw",
+        "notes": "",
+        "totalPackages": "26 und",
+        "recipient": "jairo",
+        "destination": "F/Sao Mamade",
+        "deliveredQty": 3
+      },
+      {
+        "responsible": "Gabriela",
+        "product": "limpiaVidrios",
+        "finalFormat": "0,75 und",
+        "productAmount": "5 litros",
+        "date": "2026-01-13",
+        "deliveredQty": 1,
+        "recipient": "jairo",
+        "id": "og8jevradrw",
+        "notes": "",
+        "totalPackages": "5 und",
+        "destination": "F/Sao Mamade"
+      },
+      {
+        "deliveredQty": 1,
+        "totalPackages": "1 und",
+        "notes": "",
+        "id": "ntnm7v3adrw",
+        "recipient": "jenith",
+        "destination": "PatioBellano",
+        "product": "Desentupidor",
+        "responsible": "Gabriela",
+        "finalFormat": "1 lit",
+        "date": "2026-01-13",
+        "productAmount": "1 litro"
+      },
+      {
+        "finalFormat": "6 und",
+        "date": "2026-01-13",
+        "productAmount": "300 ml",
+        "responsible": "Gabriela",
+        "product": "Ambientadores",
+        "recipient": "jairo",
+        "id": "3sudsx2adrw",
+        "totalPackages": "6 und",
+        "notes": "quedan 2 und",
+        "destination": "F/Sao Mamade",
+        "deliveredQty": 1
+      },
+      {
+        "product": "balde",
+        "responsible": "Dalila",
+        "finalFormat": "1 und",
+        "date": "2026-01-13",
+        "productAmount": "1 und",
+        "deliveredQty": 1,
+        "id": "8nzxfn0adrw",
+        "totalPackages": "1 und",
+        "notes": "",
+        "recipient": "sonia",
+        "destination": "Nortada"
+      },
+      {
+        "product": "Guantes",
+        "responsible": "Gabriela",
+        "date": "2026-01-13",
+        "productAmount": "7 pares",
+        "finalFormat": "7 pares",
+        "deliveredQty": 7,
+        "destination": "PatioBellano",
+        "id": "seqliqmadrw",
+        "notes": "",
+        "totalPackages": "7 pares",
+        "recipient": "jenith"
+      }
+    ],
+    "materials": [
+      {
+        "monthlyUse": 24,
+        "stock": 38,
+        "id": "muv0im8ongn",
+        "minStock": 15,
+        "name": "Detergente neutro"
+      },
+      {
+        "stock": 11,
+        "monthlyUse": 17,
+        "id": "ekir3yqongn",
+        "minStock": 14,
+        "name": "Desinfetante"
+      },
+      {
+        "monthlyUse": 18,
+        "stock": 62,
+        "minStock": 25,
+        "id": "ybpy85longn",
+        "name": "Panos microfibra"
+      },
+      {
+        "minStock": 20,
+        "id": "u12pywcongn",
+        "stock": 19,
+        "monthlyUse": 22,
+        "name": "Sacos lixo industrial"
+      },
+      {
+        "stock": 2,
+        "monthlyUse": 2,
+        "minStock": 2,
+        "id": "aowgpqi6x2k",
+        "name": "ssss"
+      },
+      {
+        "name": "sssss1",
+        "stock": 1,
+        "monthlyUse": 1,
+        "id": "uz13p5fp3oh",
+        "minStock": 11
+      },
+      {
+        "id": "et3wandjdgg",
+        "minStock": 1,
+        "monthlyUse": 5,
+        "stock": 1,
+        "name": "jjj"
+      },
+      {
+        "minStock": 1,
+        "id": "r55ziacnm1x",
+        "monthlyUse": 1,
+        "stock": 1,
+        "name": "ssss"
+      }
+    ],
+    "payments": [
+      {
+        "amount": 560,
+        "responsible": "",
+        "status": "pago",
+        "date": "2026-02-02",
+        "invoiceReceipt": "factura",
+        "concept": "Servico Recorrente",
+        "method": "TRFB",
+        "notes": "",
+        "id": "6zbhhe0sty6",
+        "client": "Bellano"
+      },
+      {
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "factura",
+        "status": "pago",
+        "date": "2026-02-02",
+        "responsible": "",
+        "amount": 930,
+        "client": "Nortada",
+        "id": "5lyxiuxv8jy",
+        "notes": "",
+        "method": "TRFB"
+      },
+      {
+        "amount": 950,
+        "responsible": "",
+        "date": "2026-02-02",
+        "status": "pago",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "factura",
+        "method": "TRFB",
+        "client": "Tokotai",
+        "id": "tu4l0ewv9vx",
+        "notes": ""
+      },
+      {
+        "id": "zh3iv9r17cc",
+        "notes": "",
+        "client": "Bar Stellar",
+        "method": "TRFB",
+        "date": "2026-02-02",
+        "status": "pago",
+        "invoiceReceipt": "factura",
+        "concept": "Servico Recorrente",
+        "amount": 264,
+        "responsible": ""
+      },
+      {
+        "method": "TRFB",
+        "notes": "",
+        "id": "soje1wp3i22",
+        "client": "Bar Azul",
+        "responsible": "",
+        "amount": 560,
+        "invoiceReceipt": "factura",
+        "concept": "Servico Recorrente",
+        "date": "2026-02-02",
+        "status": "pago"
+      },
+      {
+        "client": "Patio Exterior",
+        "notes": "",
+        "id": "r0xqlv443dz",
+        "method": "TRFB",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "factura",
+        "status": "pago",
+        "date": "2026-02-02",
+        "responsible": "",
+        "amount": 60
+      },
+      {
+        "client": "ABF",
+        "id": "v4vx2m44nch",
+        "notes": "",
+        "method": "TRFB",
+        "date": "2026-02-02",
+        "status": "pago",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "factura",
+        "amount": 160,
+        "responsible": ""
+      },
+      {
+        "method": "TRFB",
+        "notes": "",
+        "id": "bodvafb5hi6",
+        "client": "Plasctic",
+        "responsible": "",
+        "amount": 660,
+        "invoiceReceipt": "factura",
+        "concept": "Servico Recorrente",
+        "status": "pago",
+        "date": "2026-02-02"
+      },
+      {
+        "responsible": "",
+        "amount": 400,
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "factura",
+        "status": "pago",
+        "date": "2026-02-02",
+        "method": "TRFB",
+        "client": "Escritorio Ramalde",
+        "id": "h6dqkl89z56",
+        "notes": ""
+      },
+      {
+        "client": "Escritorio Sao Mamade",
+        "id": "tn1g0ckarlv",
+        "notes": "",
+        "method": "TRFB",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "factura",
+        "status": "pago",
+        "date": "2026-02-02",
+        "responsible": "",
+        "amount": 500
+      },
+      {
+        "method": "TRFB",
+        "client": "Escritorio Nortada",
+        "notes": "",
+        "id": "hatorolbvip",
+        "amount": 185,
+        "responsible": "",
+        "status": "pago",
+        "date": "2026-02-02",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "factura"
+      },
+      {
+        "responsible": "",
+        "amount": 26,
+        "invoiceReceipt": "factura",
+        "concept": "Servico Recorrente",
+        "date": "2026-02-02",
+        "status": "pago",
+        "method": "TRFB",
+        "notes": "",
+        "id": "ennvu9rdfj6",
+        "client": "lavanderia panos bar"
+      },
+      {
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "recibo",
+        "status": "pago",
+        "date": "2026-01-02",
+        "responsible": "",
+        "amount": 620,
+        "client": "Bellano",
+        "notes": "",
+        "id": "ieiopix2ps4",
+        "method": "TRFB"
+      },
+      {
+        "responsible": "",
+        "amount": 930,
+        "invoiceReceipt": "recibo",
+        "concept": "Servico Recorrente",
+        "status": "pago",
+        "date": "2026-01-02",
+        "method": "TRFB",
+        "notes": "",
+        "id": "krhnx002ipm",
+        "client": "Nortada"
+      },
+      {
+        "responsible": "",
+        "amount": 570,
+        "invoiceReceipt": "recibo",
+        "concept": "Servico Recorrente",
+        "status": "pago",
+        "date": "2026-01-01",
+        "method": "TRFB",
+        "id": "l4fg0f13f0t",
+        "notes": "",
+        "client": "Plasctic"
+      },
+      {
+        "method": "TRFB",
+        "client": "Tokotai",
+        "id": "wxu7msp47cn",
+        "notes": "",
+        "amount": 850,
+        "responsible": "",
+        "date": "2026-01-01",
+        "status": "pago",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "recibo"
+      },
+      {
+        "amount": 60,
+        "responsible": "",
+        "status": "pago",
+        "date": "2026-01-01",
+        "invoiceReceipt": "recibo",
+        "concept": "Servico Recorrente",
+        "method": "TRFB",
+        "id": "tmnfn5f5a71",
+        "notes": "",
+        "client": "Patio Exterior"
+      },
+      {
+        "amount": 260,
+        "responsible": "",
+        "status": "pago",
+        "date": "2026-01-01",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "recibo",
+        "method": "TRFB",
+        "client": "Bar Stellar",
+        "id": "9a7svb25wfs",
+        "notes": ""
+      },
+      {
+        "responsible": "",
+        "amount": 430,
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "recibo",
+        "status": "pago",
+        "date": "2026-01-01",
+        "method": "TRFB",
+        "client": "Bar Azul",
+        "notes": "",
+        "id": "54mz68s719b"
+      },
+      {
+        "status": "pago",
+        "date": "2026-01-01",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "recibo",
+        "amount": 1060,
+        "responsible": "",
+        "client": "ABF",
+        "notes": "",
+        "id": "xyyq8g98tv1",
+        "method": "TRFB"
+      },
+      {
+        "method": "TRFB",
+        "id": "rflqhbc9mlz",
+        "notes": "",
+        "client": "Escritorio Nortada",
+        "amount": 185,
+        "responsible": "",
+        "date": "2026-01-01",
+        "status": "pago",
+        "invoiceReceipt": "recibo",
+        "concept": "Servico Recorrente"
+      },
+      {
+        "date": "2025-07-01",
+        "status": "pago",
+        "invoiceReceipt": "",
+        "concept": "general+extras",
+        "amount": 496,
+        "responsible": "",
+        "notes": "Importado julho 2025 (imagem)",
+        "id": "qdsiwzoq7l4",
+        "client": "Bellano",
+        "method": "TRFB"
+      },
+      {
+        "method": "TRFB",
+        "client": "Zapata",
+        "notes": "Importado julho 2025 (imagem)",
+        "id": "ptpvt84q7l5",
+        "amount": 496,
+        "responsible": "",
+        "status": "pago",
+        "date": "2025-07-01",
+        "concept": "general",
+        "invoiceReceipt": ""
+      },
+      {
+        "method": "TRFB",
+        "notes": "Importado julho 2025 (imagem)",
+        "id": "stnuf1fq7l5",
+        "client": "Nortada",
+        "amount": 800,
+        "responsible": "",
+        "status": "pago",
+        "date": "2025-07-01",
+        "invoiceReceipt": "",
+        "concept": "general+extras"
+      },
+      {
+        "method": "TRFB",
+        "client": "ABF gimnasio",
+        "notes": "Importado julho 2025 (imagem)",
+        "id": "yo8l219q7l5",
+        "responsible": "",
+        "amount": 303.34,
+        "concept": "general",
+        "invoiceReceipt": "",
+        "status": "pago",
+        "date": "2025-07-01"
+      },
+      {
+        "method": "TRFB",
+        "notes": "Importado julho 2025 (imagem)",
+        "id": "3t9936lq7l5",
+        "client": "180o Bom successo",
+        "responsible": "",
+        "amount": 600,
+        "invoiceReceipt": "",
+        "concept": "extras obras",
+        "status": "pago",
+        "date": "2025-07-01"
+      },
+      {
+        "amount": 400,
+        "responsible": "",
+        "date": "2025-07-01",
+        "status": "pago",
+        "invoiceReceipt": "",
+        "concept": "extras obras",
+        "method": "TRFB",
+        "id": "aqz3hgeq7l5",
+        "notes": "Importado julho 2025 (imagem)",
+        "client": "Bar azul"
+      },
+      {
+        "notes": "Importado julho 2025 (imagem)",
+        "id": "j0vxdogq7l5",
+        "client": "Quiosque Bom successo",
+        "method": "TRFB",
+        "status": "pago",
+        "date": "2025-07-01",
+        "invoiceReceipt": "",
+        "concept": "extras obras",
+        "amount": 80,
+        "responsible": ""
+      },
+      {
+        "method": "TRFB",
+        "notes": "Importado agosto 2025 (imagem)",
+        "id": "h4d1zg2k9dy",
+        "client": "Bellano",
+        "responsible": "",
+        "amount": 496,
+        "invoiceReceipt": "",
+        "concept": "general",
+        "status": "pago",
+        "date": "2025-08-01"
+      },
+      {
+        "amount": 496,
+        "responsible": "",
+        "date": "2025-08-01",
+        "status": "pago",
+        "concept": "general",
+        "invoiceReceipt": "",
+        "method": "TRFB",
+        "client": "Zapata",
+        "id": "04zsbyak9dy",
+        "notes": "Importado agosto 2025 (imagem)"
+      },
+      {
+        "responsible": "",
+        "amount": 850,
+        "invoiceReceipt": "",
+        "concept": "general",
+        "date": "2025-08-01",
+        "status": "pago",
+        "method": "TRFB",
+        "notes": "Importado agosto 2025 (imagem)",
+        "id": "1kce0hvk9dy",
+        "client": "Nortada"
+      },
+      {
+        "amount": 406,
+        "responsible": "",
+        "date": "2025-08-01",
+        "status": "pago",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "method": "TRFB",
+        "notes": "Importado agosto 2025 (imagem)",
+        "id": "f5tlnhqk9dy",
+        "client": "Funeraria"
+      },
+      {
+        "method": "TRFB",
+        "client": "Funeraria S.",
+        "id": "78gtpv7k9dy",
+        "notes": "Importado agosto 2025 (imagem)",
+        "responsible": "",
+        "amount": 500,
+        "concept": "general",
+        "invoiceReceipt": "",
+        "status": "pago",
+        "date": "2025-08-01"
+      },
+      {
+        "client": "ABF gimnasio",
+        "id": "ru0hqdsk9dy",
+        "notes": "Importado agosto 2025 (imagem)",
+        "method": "TRFB",
+        "status": "pago",
+        "date": "2025-08-01",
+        "concept": "general",
+        "invoiceReceipt": "",
+        "amount": 160,
+        "responsible": ""
+      },
+      {
+        "amount": 470,
+        "responsible": "",
+        "date": "2025-08-01",
+        "status": "pago",
+        "concept": "general",
+        "invoiceReceipt": "",
+        "method": "TRFB",
+        "client": "ABF extra",
+        "notes": "Importado agosto 2025 (imagem)",
+        "id": "ov309uqk9dy"
+      },
+      {
+        "amount": 496,
+        "responsible": "",
+        "date": "2025-09-01",
+        "status": "pago",
+        "concept": "general",
+        "invoiceReceipt": "",
+        "method": "TRFB",
+        "client": "Bellano",
+        "notes": "Importado setembro 2025 (imagem)",
+        "id": "cwsmt8u9wjh"
+      },
+      {
+        "responsible": "",
+        "amount": 496,
+        "invoiceReceipt": "",
+        "concept": "general",
+        "date": "2025-09-01",
+        "status": "pago",
+        "method": "TRFB",
+        "notes": "Importado setembro 2025 (imagem)",
+        "id": "q683fxt9wjh",
+        "client": "Zapata"
+      },
+      {
+        "method": "TRFB",
+        "id": "beh803f9wjh",
+        "notes": "Importado setembro 2025 (imagem)",
+        "client": "Nortada",
+        "responsible": "",
+        "amount": 800,
+        "invoiceReceipt": "",
+        "concept": "general",
+        "date": "2025-09-01",
+        "status": "pago"
+      },
+      {
+        "amount": 406,
+        "responsible": "",
+        "date": "2025-09-01",
+        "status": "pago",
+        "concept": "general",
+        "invoiceReceipt": "",
+        "method": "TRFB",
+        "client": "Funeraria",
+        "id": "u1gkygf9wjh",
+        "notes": "Importado setembro 2025 (imagem)"
+      },
+      {
+        "amount": 500,
+        "responsible": "",
+        "status": "pago",
+        "date": "2025-09-01",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "method": "TRFB",
+        "id": "zfmtto99wjh",
+        "notes": "Importado setembro 2025 (imagem)",
+        "client": "Funeraria S."
+      },
+      {
+        "status": "pago",
+        "date": "2025-09-01",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "amount": 160,
+        "responsible": "",
+        "notes": "Importado setembro 2025 (imagem)",
+        "id": "1hn6e1x9wjh",
+        "client": "ABF gimnasio",
+        "method": "TRFB"
+      },
+      {
+        "method": "TRFB",
+        "client": "Bellano",
+        "id": "6738e0np809",
+        "notes": "Importado outubro 2025 (imagem)",
+        "responsible": "",
+        "amount": 496,
+        "concept": "general",
+        "invoiceReceipt": "",
+        "date": "2025-10-01",
+        "status": "pago"
+      },
+      {
+        "id": "q3ujs3bp809",
+        "notes": "Importado outubro 2025 (imagem)",
+        "client": "Zapata",
+        "method": "TRFB",
+        "date": "2025-10-01",
+        "status": "pago",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "amount": 496,
+        "responsible": ""
+      },
+      {
+        "client": "Nortada",
+        "notes": "Importado outubro 2025 (imagem)",
+        "id": "1ylhgjbp809",
+        "method": "TRFB",
+        "concept": "general",
+        "invoiceReceipt": "",
+        "date": "2025-10-01",
+        "status": "pago",
+        "responsible": "",
+        "amount": 800
+      },
+      {
+        "method": "TRFB",
+        "id": "m42eycvp809",
+        "notes": "Importado outubro 2025 (imagem)",
+        "client": "Funeraria Ramalde",
+        "amount": 406,
+        "responsible": "",
+        "date": "2025-10-01",
+        "status": "pago",
+        "invoiceReceipt": "",
+        "concept": "general"
+      },
+      {
+        "responsible": "",
+        "amount": 500,
+        "concept": "general",
+        "invoiceReceipt": "",
+        "date": "2025-10-01",
+        "status": "pago",
+        "method": "TRFB",
+        "client": "Funeraria S.",
+        "notes": "Importado outubro 2025 (imagem)",
+        "id": "2k3rxuop809"
+      },
+      {
+        "method": "TRFB",
+        "id": "hnsnj74p809",
+        "notes": "Importado outubro 2025 (imagem)",
+        "client": "ABF gimnasio",
+        "responsible": "",
+        "amount": 160,
+        "invoiceReceipt": "",
+        "concept": "general",
+        "date": "2025-10-01",
+        "status": "pago"
+      },
+      {
+        "responsible": "",
+        "amount": 496,
+        "concept": "general",
+        "invoiceReceipt": "",
+        "status": "pago",
+        "date": "2025-11-01",
+        "method": "TRFB",
+        "client": "Bellano",
+        "id": "b4g83jksy7p",
+        "notes": "Importado novembro 2025 (imagem)"
+      },
+      {
+        "invoiceReceipt": "",
+        "concept": "general",
+        "status": "pago",
+        "date": "2025-11-01",
+        "responsible": "",
+        "amount": 850,
+        "id": "3ugezy7sy7p",
+        "notes": "Importado novembro 2025 (imagem)",
+        "client": "Tokotai",
+        "method": "TRFB"
+      },
+      {
+        "amount": 820,
+        "responsible": "",
+        "date": "2025-11-01",
+        "status": "pago",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "method": "TRFB",
+        "id": "dxlrox2sy7p",
+        "notes": "Importado novembro 2025 (imagem)",
+        "client": "Nortada"
+      },
+      {
+        "invoiceReceipt": "",
+        "concept": "general",
+        "date": "2025-11-01",
+        "status": "pago",
+        "responsible": "",
+        "amount": 500,
+        "id": "5ot2u9ssy7p",
+        "notes": "Importado novembro 2025 (imagem)",
+        "client": "Funeraria",
+        "method": "TRFB"
+      },
+      {
+        "notes": "Importado novembro 2025 (imagem)",
+        "id": "09qzoyusy7p",
+        "client": "Funeraria S.",
+        "method": "TRFB",
+        "date": "2025-11-01",
+        "status": "pago",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "amount": 615,
+        "responsible": ""
+      },
+      {
+        "id": "rk2yzc3sy7p",
+        "notes": "Importado novembro 2025 (imagem)",
+        "client": "ABF gimnasio",
+        "method": "TRFB",
+        "status": "pago",
+        "date": "2025-11-01",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "amount": 196.8,
+        "responsible": ""
+      },
+      {
+        "amount": 264,
+        "responsible": "",
+        "date": "2025-11-01",
+        "status": "pago",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "method": "TRFB",
+        "notes": "Importado novembro 2025 (imagem)",
+        "id": "zen0ph9sy7p",
+        "client": "Bar Cellar"
+      },
+      {
+        "responsible": "",
+        "amount": 160,
+        "concept": "general",
+        "invoiceReceipt": "",
+        "date": "2025-11-01",
+        "status": "pago",
+        "method": "TRFB",
+        "client": "Escritorio N",
+        "id": "0if8jhdsy7p",
+        "notes": "Importado novembro 2025 (imagem)"
+      },
+      {
+        "method": "TRFB",
+        "id": "wl96v7yxi54",
+        "notes": "Importado dezembro 2025 (imagem)",
+        "client": "Bellano",
+        "responsible": "",
+        "amount": 496,
+        "invoiceReceipt": "",
+        "concept": "general",
+        "status": "pago",
+        "date": "2025-12-01"
+      },
+      {
+        "amount": 850,
+        "responsible": "",
+        "status": "pago",
+        "date": "2025-12-01",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "method": "TRFB",
+        "id": "f48p0kpxi54",
+        "notes": "Importado dezembro 2025 (imagem)",
+        "client": "Tokotai"
+      },
+      {
+        "method": "TRFB",
+        "id": "saz0wo0xi54",
+        "notes": "Importado dezembro 2025 (imagem)",
+        "client": "Nortada",
+        "amount": 820,
+        "responsible": "",
+        "status": "pago",
+        "date": "2025-12-01",
+        "invoiceReceipt": "",
+        "concept": "general"
+      },
+      {
+        "status": "pago",
+        "date": "2025-12-01",
+        "invoiceReceipt": "",
+        "concept": "general",
+        "amount": 500,
+        "responsible": "",
+        "notes": "Importado dezembro 2025 (imagem)",
+        "id": "pqtgqx6xi54",
+        "client": "Funeraria",
+        "method": "TRFB"
+      },
+      {
+        "status": "pago",
+        "date": "2025-12-01",
+        "concept": "general",
+        "invoiceReceipt": "",
+        "amount": 615,
+        "responsible": "",
+        "client": "Funeraria S.",
+        "id": "totff9vxi54",
+        "notes": "Importado dezembro 2025 (imagem)",
+        "method": "TRFB"
+      },
+      {
+        "responsible": "",
+        "amount": 196.8,
+        "concept": "general",
+        "invoiceReceipt": "",
+        "date": "2025-12-01",
+        "status": "pago",
+        "method": "TRFB",
+        "client": "ABF gimnasio",
+        "id": "kl82ytaxi54",
+        "notes": "Importado dezembro 2025 (imagem)"
+      },
+      {
+        "responsible": "",
+        "amount": 264,
+        "invoiceReceipt": "",
+        "concept": "general",
+        "date": "2025-12-01",
+        "status": "pago",
+        "method": "TRFB",
+        "notes": "Importado dezembro 2025 (imagem)",
+        "id": "fuhrebdxi54",
+        "client": "Bar Cellar"
+      },
+      {
+        "method": "TRFB",
+        "id": "ds25tbqxi54",
+        "notes": "Importado dezembro 2025 (imagem)",
+        "client": "Escritorio N",
+        "amount": 160,
+        "responsible": "",
+        "status": "pago",
+        "date": "2025-12-01",
+        "invoiceReceipt": "",
+        "concept": "general"
+      },
+      {
+        "date": "2026-03-01",
+        "status": "pago",
+        "invoiceReceipt": "factura",
+        "concept": "Servico Recorrente",
+        "amount": 62,
+        "responsible": "dalila",
+        "notes": "",
+        "id": "nf2160bgpvj",
+        "client": "t2 aprtamento",
+        "method": "TRFB"
+      },
+      {
+        "status": "pendente",
+        "date": "2026-02-01",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "factura",
+        "amount": 20,
+        "responsible": "",
+        "client": "Casa Quinzenal",
+        "id": "h0athk2qf34",
+        "notes": "",
+        "method": "Numerario"
+      },
+      {
+        "client": "lavanderia panos bar",
+        "id": "7icu7x1utet",
+        "notes": "",
+        "method": "TRFB",
+        "concept": "Servico Recorrente",
+        "invoiceReceipt": "factura",
+        "date": "2026-03-01",
+        "status": "pago",
+        "responsible": "",
+        "amount": 28
+      },
+      {
+        "status": "pago",
+        "date": "2026-03-01",
+        "invoiceReceipt": "",
+        "concept": "Servico Recorrente",
+        "amount": 0,
+        "responsible": "",
+        "notes": "",
+        "id": "7zbhfbvvnfl",
+        "client": "",
+        "method": "TRFB"
+      }
+    ],
+    "salaryPayments": [
+      {
+        "baseSalary": 50,
+        "extras": 0,
+        "deductions": 0,
+        "status": "pago",
+        "employee": "Gabriela S.",
+        "month": "2026-02",
+        "paidAt": "2026-02-28",
+        "notes": "",
+        "id": "kkvbl7jm477"
+      },
+      {
+        "paidAt": "2026-02-28",
+        "id": "jq3e96eqgvk",
+        "notes": "",
+        "month": "2026-02",
+        "employee": "Sonia C.",
+        "status": "pago",
+        "baseSalary": 950,
+        "deductions": 0,
+        "extras": 88
+      },
+      {
+        "deductions": 0,
+        "baseSalary": 475,
+        "extras": 0,
+        "status": "pago",
+        "employee": "Isabel P.",
+        "month": "2026-02",
+        "paidAt": "2026-02-28",
+        "notes": "",
+        "id": "kbv431rr62d"
+      },
+      {
+        "paidAt": "2026-02-28",
+        "notes": "",
+        "id": "w2i7d7zroc7",
+        "employee": "Angie S.",
+        "month": "2026-02",
+        "status": "pago",
+        "baseSalary": 400,
+        "deductions": 0,
+        "extras": 0
+      },
+      {
+        "status": "pago",
+        "baseSalary": 150,
+        "extras": 0,
+        "deductions": 0,
+        "id": "qfoitjqsmy9",
+        "notes": "",
+        "paidAt": "2026-02-28",
+        "employee": "Jeny S.",
+        "month": "2026-02"
+      },
+      {
+        "deductions": 0,
+        "baseSalary": 50,
+        "extras": 0,
+        "status": "pago",
+        "employee": "Loushiana S.",
+        "month": "2026-02",
+        "notes": "",
+        "id": "y8vp4susw4r",
+        "paidAt": "2026-02-28"
+      },
+      {
+        "id": "966053t5uof",
+        "notes": "",
+        "paidAt": "2026-02-28",
+        "employee": "Jairo J.",
+        "month": "2026-02",
+        "status": "pago",
+        "baseSalary": 236,
+        "deductions": 0,
+        "extras": 0
+      },
+      {
+        "month": "2026-02",
+        "employee": "Dalila S.",
+        "paidAt": "2026-02-28",
+        "notes": "",
+        "id": "q5o6pe769dj",
+        "baseSalary": 450,
+        "extras": 0,
+        "deductions": 0,
+        "status": "pago"
+      },
+      {
+        "deductions": 0,
+        "baseSalary": 450,
+        "extras": 0,
+        "status": "pago",
+        "month": "2026-02",
+        "employee": "Narai S.",
+        "paidAt": "2026-02-28",
+        "id": "qf291b77065",
+        "notes": ""
+      },
+      {
+        "paidAt": "2026-02-28",
+        "id": "81wqmji7n6d",
+        "notes": "",
+        "employee": "Joao P.",
+        "month": "2026-02",
+        "status": "pago",
+        "baseSalary": 164,
+        "deductions": 0,
+        "extras": 55
+      },
+      {
+        "baseSalary": 105,
+        "deductions": 0,
+        "extras": 0,
+        "status": "pago",
+        "month": "2026-02",
+        "employee": "Samuel D.",
+        "paidAt": "2026-02-28",
+        "id": "gq6wqryxmzf",
+        "notes": ""
+      },
+      {
+        "paidAt": "",
+        "notes": "",
+        "id": "eomvzq5e1fg",
+        "month": "2026-03",
+        "employee": "Angie S.",
+        "status": "pendente",
+        "deductions": 0,
+        "baseSalary": 400,
+        "extras": 0
+      },
+      {
+        "paidAt": "",
+        "notes": "",
+        "id": "uczv0bje1k6",
+        "month": "2026-03",
+        "employee": "Sonia C.",
+        "status": "pendente",
+        "baseSalary": 1030,
+        "deductions": 0,
+        "extras": 0
+      },
+      {
+        "notes": "",
+        "id": "uz9mjuze2b7",
+        "paidAt": "",
+        "month": "2026-03",
+        "employee": "Julian F.",
+        "status": "pendente",
+        "baseSalary": 408,
+        "extras": 0,
+        "deductions": 0
+      },
+      {
+        "month": "2026-03",
+        "employee": "Gabriela S.",
+        "paidAt": "",
+        "id": "sn6am8qe2fl",
+        "notes": "",
+        "baseSalary": 66,
+        "extras": 0,
+        "deductions": 0,
+        "status": "pendente"
+      },
+      {
+        "status": "pendente",
+        "baseSalary": 460,
+        "extras": 0,
+        "deductions": 0,
+        "paidAt": "",
+        "id": "wwf7du4e2ks",
+        "notes": "",
+        "employee": "Isabel P.",
+        "month": "2026-03"
+      },
+      {
+        "status": "pendente",
+        "extras": 0,
+        "deductions": 0,
+        "baseSalary": 254,
+        "id": "rjrk5j1e2r2",
+        "notes": "",
+        "paidAt": "",
+        "month": "2026-03",
+        "employee": "Jairo J."
+      },
+      {
+        "deductions": 0,
+        "extras": 0,
+        "baseSalary": 198,
+        "status": "pendente",
+        "employee": "Joao P.",
+        "month": "2026-03",
+        "id": "9gsgnb3g7yp",
+        "notes": "",
+        "paidAt": ""
+      },
+      {
+        "baseSalary": 350,
+        "extras": 0,
+        "deductions": 0,
+        "status": "pendente",
+        "employee": "Dalila S.",
+        "month": "2026-03",
+        "paidAt": "",
+        "notes": "",
+        "id": "h1h2mq7gax0"
+      },
+      {
+        "extras": 0,
+        "baseSalary": 130,
+        "deductions": 0,
+        "status": "pendente",
+        "employee": "Samuel D.",
+        "month": "2026-03",
+        "paidAt": "",
+        "notes": "",
+        "id": "0hbkclngbg8"
+      },
+      {
+        "extras": 0,
+        "deductions": 0,
+        "baseSalary": 450,
+        "status": "pendente",
+        "month": "2026-03",
+        "employee": "Narai S.",
+        "paidAt": "",
+        "id": "sz297y8gbv4",
+        "notes": ""
+      },
+      {
+        "notes": "",
+        "id": "40xohvb7al9",
+        "paidAt": "2025-08-09",
+        "month": "2025-08",
+        "employee": "Sonia C.",
+        "status": "pago",
+        "deductions": 0,
+        "baseSalary": 820,
+        "extras": 0
+      },
+      {
+        "deductions": 0,
+        "extras": 0,
+        "baseSalary": 384,
+        "status": "pago",
+        "month": "2025-08",
+        "employee": "Jeny S.",
+        "paidAt": "2025-08-09",
+        "id": "j3h0gs9cmq8",
+        "notes": ""
+      },
+      {
+        "status": "pago",
+        "deductions": 0,
+        "extras": 0,
+        "baseSalary": 250,
+        "paidAt": "2025-08-09",
+        "notes": "",
+        "id": "19dl78lhi8o",
+        "month": "2025-08",
+        "employee": "Jairo J."
+      },
+      {
+        "notes": "",
+        "id": "l0vkf0ruy9d",
+        "paidAt": "2026-02-02",
+        "month": "2026-02",
+        "employee": "Julian F.",
+        "status": "pago",
+        "deductions": 0,
+        "extras": 0,
+        "baseSalary": 252
+      },
+      {
+        "paidAt": "2026-01-01",
+        "id": "1o61nmwxzxr",
+        "notes": "",
+        "month": "2026-01",
+        "employee": "Dalila S.",
+        "status": "pago",
+        "extras": 0,
+        "deductions": 0,
+        "baseSalary": 513
+      },
+      {
+        "deductions": 0,
+        "extras": 0,
+        "baseSalary": 505,
+        "status": "pago",
+        "month": "2026-01",
+        "employee": "Narai S.",
+        "notes": "",
+        "id": "dgemy86yiay",
+        "paidAt": "2026-01-01"
+      },
+      {
+        "status": "pago",
+        "baseSalary": 254,
+        "deductions": 0,
+        "extras": 60,
+        "notes": "",
+        "id": "f8ic0cf0zuz",
+        "paidAt": "2026-01-01",
+        "month": "2026-01",
+        "employee": "Jairo J."
+      },
+      {
+        "status": "pago",
+        "baseSalary": 400,
+        "deductions": 0,
+        "extras": 10,
+        "paidAt": "2026-01-01",
+        "notes": "",
+        "id": "su6nfke2r59",
+        "employee": "Angie S.",
+        "month": "2026-01"
+      },
+      {
+        "extras": 32,
+        "deductions": 0,
+        "baseSalary": 164,
+        "status": "pago",
+        "month": "2026-01",
+        "employee": "Joao P.",
+        "paidAt": "2026-01-01",
+        "id": "9jqu32d3rzv",
+        "notes": ""
+      },
+      {
+        "baseSalary": 153,
+        "deductions": 0,
+        "extras": 0,
+        "status": "pendente",
+        "month": "2026-01",
+        "employee": "Samuel D.",
+        "id": "jdwvmjjee0p",
+        "notes": "",
+        "paidAt": ""
+      },
+      {
+        "extras": 28,
+        "baseSalary": 770,
+        "deductions": 0,
+        "status": "pendente",
+        "month": "2026-01",
+        "employee": "Sonia C.",
+        "paidAt": "",
+        "id": "3hoo0uzgnmm",
+        "notes": ""
+      },
+      {
+        "notes": "",
+        "id": "7iubp3eioes",
+        "paidAt": "",
+        "employee": "Jeny S.",
+        "month": "2026-01",
+        "status": "pendente",
+        "baseSalary": 107,
+        "deductions": 0,
+        "extras": 0
+      },
+      {
+        "notes": "",
+        "id": "3isvp2wkgbm",
+        "paidAt": "",
+        "month": "2026-01",
+        "employee": "Isabel P.",
+        "status": "pendente",
+        "baseSalary": 713,
+        "extras": 0,
+        "deductions": 0
+      },
+      {
+        "paidAt": "",
+        "id": "5ss5v4mkhuj",
+        "notes": "",
+        "month": "2026-01",
+        "employee": "Loushiana S.",
+        "status": "pendente",
+        "deductions": 0,
+        "baseSalary": 50,
+        "extras": 0
+      },
+      {
+        "month": "2026-01",
+        "employee": "Gabriela S.",
+        "notes": "",
+        "id": "m8xe93jkhyc",
+        "paidAt": "",
+        "extras": 0,
+        "baseSalary": 116,
+        "deductions": 0,
+        "status": "pendente"
+      },
+      {
+        "notes": "",
+        "id": "18sldawmu25",
+        "paidAt": "",
+        "employee": "Julian F.",
+        "month": "2026-01",
+        "status": "pendente",
+        "baseSalary": 131,
+        "deductions": 0,
+        "extras": 0
+      },
+      {
+        "id": "itvcna9naqj",
+        "notes": "",
+        "paidAt": "",
+        "month": "2026-01",
+        "employee": "",
+        "status": "pendente",
+        "deductions": 0,
+        "baseSalary": 0,
+        "extras": 0
+      },
+      {
+        "status": "pago",
+        "baseSalary": 480,
+        "extras": 0,
+        "deductions": 0,
+        "paidAt": "2025-12-01",
+        "notes": "",
+        "id": "glstiv9rvow",
+        "employee": "Jairo J.",
+        "month": "2025-12"
+      },
+      {
+        "notes": "",
+        "id": "6tsmyxzs7ja",
+        "paidAt": "2025-12-01",
+        "employee": "Isabel P.",
+        "month": "2025-12",
+        "status": "pago",
+        "baseSalary": 286,
+        "deductions": 0,
+        "extras": 0
+      },
+      {
+        "baseSalary": 412,
+        "deductions": 0,
+        "extras": 0,
+        "status": "pago",
+        "month": "2025-12",
+        "employee": "Angie S.",
+        "notes": "",
+        "id": "fgrhugftgk7",
+        "paidAt": "2025-12-01"
+      },
+      {
+        "status": "pago",
+        "deductions": 0,
+        "baseSalary": 108,
+        "extras": 0,
+        "id": "4c5uatpu3x6",
+        "notes": "",
+        "paidAt": "2025-12-01",
+        "employee": "Samuel D.",
+        "month": "2025-12"
+      },
+      {
+        "baseSalary": 30,
+        "extras": 0,
+        "deductions": 0,
+        "status": "pago",
+        "employee": "Gabriela S.",
+        "month": "2025-12",
+        "paidAt": "2025-12-01",
+        "id": "hd3pkmculpi",
+        "notes": ""
+      },
+      {
+        "month": "2025-12",
+        "employee": "Julian F.",
+        "id": "uafuv9xuxpx",
+        "notes": "",
+        "paidAt": "2025-12-01",
+        "extras": 0,
+        "baseSalary": 122,
+        "deductions": 0,
+        "status": "pago"
+      },
+      {
+        "month": "2025-12",
+        "employee": "Joao P.",
+        "paidAt": "2025-12-01",
+        "id": "6mi8vd5vdid",
+        "notes": "",
+        "extras": 0,
+        "deductions": 0,
+        "baseSalary": 150,
+        "status": "pago"
+      },
+      {
+        "paidAt": "2025-12-01",
+        "id": "3zxr8vbvmvg",
+        "notes": "",
+        "employee": "Sonia C.",
+        "month": "2025-12",
+        "status": "pendente",
+        "deductions": 0,
+        "extras": 0,
+        "baseSalary": 790
+      },
+      {
+        "extras": 0,
+        "baseSalary": 450,
+        "deductions": 0,
+        "status": "pago",
+        "month": "2025-12",
+        "employee": "Narai S.",
+        "notes": "",
+        "id": "1gfw4n8w5xh",
+        "paidAt": "2025-12-01"
+      },
+      {
+        "month": "2025-12",
+        "employee": "Dalila S.",
+        "paidAt": "2025-12-01",
+        "id": "dcn89e0x1pw",
+        "notes": "",
+        "baseSalary": 300,
+        "deductions": 0,
+        "extras": 0,
+        "status": "pago"
+      },
+      {
+        "paidAt": "",
+        "notes": "",
+        "id": "wu2y990g93l",
+        "employee": "Jeny S.",
+        "month": "2026-03",
+        "status": "pendente",
+        "deductions": 0,
+        "extras": 0,
+        "baseSalary": 150
+      },
+      {
+        "paidAt": "",
+        "id": "yt2ilwbk8wd",
+        "notes": "",
+        "employee": "Loushiana S.",
+        "month": "2026-03",
+        "status": "pendente",
+        "extras": 0,
+        "baseSalary": 50,
+        "deductions": 0
+      },
+      {
+        "id": "hkhewdol38k",
+        "notes": "",
+        "paidAt": "",
+        "employee": "Sonia C.",
+        "month": "2025-11",
+        "status": "pago",
+        "baseSalary": 0,
+        "extras": 0,
+        "deductions": 0
+      },
+      {
+        "baseSalary": 0,
+        "deductions": 0,
+        "extras": 0,
+        "status": "pendente",
+        "month": "2025-11",
+        "employee": "Angie S.",
+        "id": "v8qg4h1l42j",
+        "notes": "",
+        "paidAt": ""
+      },
+      {
+        "paidAt": "",
+        "id": "889auz7l4g1",
+        "notes": "",
+        "month": "2025-11",
+        "employee": "Dalila S.",
+        "status": "pendente",
+        "baseSalary": 0,
+        "extras": 0,
+        "deductions": 0
+      },
+      {
+        "month": "2025-11",
+        "employee": "Gabriela S.",
+        "paidAt": "",
+        "notes": "",
+        "id": "rx5rwhgl4n4",
+        "extras": 0,
+        "deductions": 0,
+        "baseSalary": 0,
+        "status": "pendente"
+      },
+      {
+        "month": "2025-11",
+        "employee": "Joao P.",
+        "paidAt": "",
+        "notes": "",
+        "id": "4hggnfwl4t9",
+        "extras": 0,
+        "baseSalary": 164,
+        "deductions": 0,
+        "status": "pago"
+      },
+      {
+        "employee": "Julian F.",
+        "month": "2025-11",
+        "notes": "",
+        "id": "9naj3col4z6",
+        "paidAt": "",
+        "baseSalary": 0,
+        "extras": 0,
+        "deductions": 0,
+        "status": "pago"
+      },
+      {
+        "employee": "Dalila S.",
+        "month": "2025-11",
+        "id": "s31suqzl54l",
+        "notes": "",
+        "paidAt": "",
+        "extras": 0,
+        "deductions": 0,
+        "baseSalary": 0,
+        "status": "pendente"
+      },
+      {
+        "id": "8ldq83sl5bh",
+        "notes": "",
+        "paidAt": "",
+        "employee": "Narai S.",
+        "month": "2025-11",
+        "status": "pago",
+        "deductions": 0,
+        "baseSalary": 0,
+        "extras": 0
+      },
+      {
+        "id": "sy6npm6l5gi",
+        "notes": "",
+        "paidAt": "",
+        "employee": "Samuel D.",
+        "month": "2025-11",
+        "status": "pago",
+        "deductions": 0,
+        "baseSalary": 0,
+        "extras": 0
+      },
+      {
+        "baseSalary": 236,
+        "deductions": 0,
+        "extras": 0,
+        "status": "pago",
+        "employee": "Jairo J.",
+        "month": "2025-11",
+        "notes": "",
+        "id": "bkeyqu1l5lz",
+        "paidAt": ""
+      },
+      {
+        "status": "pago",
+        "baseSalary": 0,
+        "extras": 0,
+        "deductions": 0,
+        "notes": "",
+        "id": "41y26xll5rj",
+        "paidAt": "",
+        "month": "2025-11",
+        "employee": "Jeny S."
+      }
+    ],
+    "teams": [
+      {
+        "id": "db23ocyukr2",
+        "name": "Equipa Norte"
+      },
+      {
+        "id": "sc8d32iukr2",
+        "name": "Equipa Centro"
+      },
+      {
+        "id": "w9n5pamukr2",
+        "name": "Equipa Sul"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D&N Clean Solutions | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <div class="login-bg-orb login-bg-orb-a" aria-hidden="true"></div>
+    <div class="login-bg-orb login-bg-orb-b" aria-hidden="true"></div>
+
+    <section class="login-card" aria-labelledby="loginTitle">
+      <header class="login-head">
+        <div class="brand login-brand">
+          <img src="logo.jpg.jpg" alt="Logo D&N">
+          <div class="login-brand-copy">
+            <p class="login-kicker">Painel Operacional</p>
+            <h1 id="loginTitle">D&amp;N Clean Solutions</h1>
+          </div>
+        </div>
+        <p class="login-subtitle">Acesso seguro ao CRM de operacoes.</p>
+      </header>
+
+      <form id="loginForm" class="login-form">
+        <label class="field">
+          <input id="email" type="email" required placeholder=" ">
+          <span>Email</span>
+        </label>
+
+        <label class="field">
+          <input id="password" type="password" required minlength="8" placeholder=" ">
+          <span>Palavra-passe</span>
+        </label>
+
+        <label class="field" id="fullNameField" hidden>
+          <input id="fullName" type="text" placeholder=" ">
+          <span>Nome completo (apenas registo)</span>
+        </label>
+
+        <label class="field" id="organizationField" hidden>
+          <input id="organizationName" type="text" placeholder=" ">
+          <span>Organizacao partilhada (apenas registo)</span>
+        </label>
+
+        <button id="loginSubmitBtn" type="submit" class="btn-primary">
+          <span class="btn-label">Entrar</span>
+          <span class="btn-loading" aria-hidden="true"></span>
+        </button>
+
+        <button type="button" id="registerBtn" class="btn-secondary">Criar nova conta</button>
+        <p class="login-helper">Para criar conta: email + password forte + nome. A organizacao e partilhada por todas as contas.</p>
+      </form>
+
+      <div id="authFeedback" class="feedback login-feedback" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="frontend/js/api.js?v=20260420a"></script>
+  <script src="auth-session.js?v=20260416b"></script>
+  <script src="login.js?v=20260605a"></script>
+</body>
+</html>

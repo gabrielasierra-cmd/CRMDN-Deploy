@@ -1,0 +1,51 @@
+{
+  "name": "crm-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready backend for CRM SaaS",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "db:migrate": "psql \"$DATABASE_URL\" -v ON_ERROR_STOP=1 -f ../database/migrations/001_init.sql -f ../database/migrations/003_financial.sql -f ../database/migrations/004_financial_reversal.sql -f ../database/migrations/005_stock_module.sql -f ../database/migrations/006_work_hours.sql -f ../database/migrations/007_seed_extra_employees.sql -f ../database/migrations/008_material_categories.sql -f ../database/migrations/009_video_quotes.sql -f ../database/migrations/010_compatibility_views.sql -f ../database/migrations/011_shared_workspace.sql -f ../database/migrations/012_seed_canonical_employees.sql",
+    "db:seed": "psql \"$DATABASE_URL\" -f ../database/migrations/002_seed.sql",
+    "db:seed:clients": "ts-node --project tsconfig.json --transpile-only scripts/seed-fixed-clients.ts",
+    "legacy:import": "ts-node scripts/import-legacy.ts"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "docx": "^9.7.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "ffmpeg-static": "^5.3.0",
+    "ffprobe-static": "^3.1.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.14.12",
+    "@types/pg": "^8.11.6",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  }
+}

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicos | D&N Clean Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout dashboard-mode">
+    <aside class="dash-sidebar">
+      <div class="logo-card">
+        <img src="logo.jpg.jpg" alt="Logo D&N">
+        <div class="logo-name">D&N</div>
+        <div class="logo-sub">CLEAN SOLUTIONS</div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html?v=20260630b">Dashboard</a>
+        <a href="clientes.html?v=20260630b">Clientes</a>
+        <a class="active" href="servicos.html">Servicos</a>
+        <a href="pagamentos.html">Pagamentos</a>
+        <a href="gastos.html">Gastos</a>
+        <a href="salarios.html">Funcionarios</a>
+        <a href="frequencia-horaria.html">Frequencia Horaria</a>
+        <a href="folgas.html">Folgas & Extras</a>
+        <a href="orcamentos-ia.html">Orcamentos IA</a>
+        <a href="materiais.html">Materiais</a>
+        <a href="planos.html">Planos</a>
+      </nav>
+      <div class="toolbar">
+        <button id="logoutBtn" class="danger">Logout</button>
+      </div>
+    </aside>
+    <main class="dash-main services-page">
+      <header class="dash-top simple-top">
+        <div class="clock-pill">
+          <strong>Servicos</strong>
+          <span id="sessionInfo" class="muted"></span>
+        </div>
+      </header>
+      <div id="mainFeedback" class="feedback"></div>
+
+      <section class="services-kpi-grid">
+        <article class="services-kpi">
+          <span class="muted">Agendados</span>
+          <strong id="kpiServicesScheduled">0</strong>
+        </article>
+        <article class="services-kpi">
+          <span class="muted">Em execucao</span>
+          <strong id="kpiServicesRunning">0</strong>
+        </article>
+        <article class="services-kpi">
+          <span class="muted">Concluidos</span>
+          <strong id="kpiServicesDone">0</strong>
+        </article>
+        <article class="services-kpi">
+          <span class="muted">Cancelados</span>
+          <strong id="kpiServicesCancelled">0</strong>
+        </article>
+        <article class="services-kpi revenue">
+          <span class="muted">Receita prevista</span>
+          <strong id="kpiServicesRevenue">0,00 EUR</strong>
+        </article>
+      </section>
+
+      <div class="card requests-card services-card">
+        <div class="services-card-head">
+          <div>
+            <h3>Pedidos recebidos</h3>
+            <p class="muted">Integracao reservada para endpoint publico de pedidos.</p>
+          </div>
+          <a class="secondary services-public-link" href="pedido-servico.html" target="_blank" rel="noopener">Abrir pagina publica</a>
+        </div>
+        <div class="services-table-wrap">
+          <table class="services-table">
+            <thead><tr><th>Data</th><th>Nome</th><th>Contacto</th><th>Tipo</th><th>Preferencia</th><th>Estado</th><th>Acoes</th></tr></thead>
+            <tbody id="requestsBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <section class="card services-form-card services-card">
+        <div class="services-card-head">
+          <div>
+            <h3>Agendar ordem</h3>
+            <p class="muted">Criacao real de ordens via API /orders.</p>
+          </div>
+          <span class="services-pill">Novo servico</span>
+        </div>
+        <div id="selectedRequestInfo" class="muted services-inline-alert" style="display:none"></div>
+        <form id="serviceForm" class="services-form">
+          <div class="services-form-row">
+            <select id="sClient" required></select>
+            <select id="sTeam" required></select>
+          </div>
+          <div class="services-form-row">
+            <input id="sStart" type="datetime-local" required>
+            <input id="sHours" type="number" min="1" step="0.5" value="2" required>
+          </div>
+          <div class="services-form-row">
+            <select id="sType">
+              <option value="residencial">Residencial</option>
+              <option value="comercial">Comercial</option>
+              <option value="pos_obra">Pos-obra</option>
+            </select>
+            <select id="sPriority">
+              <option value="baixa">Baixa</option>
+              <option value="media" selected>Media</option>
+              <option value="alta">Alta</option>
+            </select>
+          </div>
+          <textarea id="sExtras" placeholder="Notas da ordem"></textarea>
+          <div class="services-form-actions">
+            <button type="submit">Agendar</button>
+            <button type="reset" class="secondary">Limpar</button>
+          </div>
+        </form>
+      </section>
+      <section class="services-workspace">
+        <article class="card services-table-card">
+          <div class="services-card-head">
+            <div>
+              <h3>Agenda</h3>
+              <p class="muted">Ordens reais da API.</p>
+            </div>
+          </div>
+          <div class="services-filters-bar">
+            <div class="services-filters">
+              <input id="serviceSearch" type="search" placeholder="Pesquisar cliente/servico">
+              <select id="serviceStatusFilter">
+                <option value="">Todos os estados</option>
+                <option value="agendado">Agendado</option>
+                <option value="em_execucao">Em execucao</option>
+                <option value="concluido">Concluido</option>
+                <option value="cancelado">Cancelado</option>
+              </select>
+              <select id="servicePriorityFilter">
+                <option value="">Todas as prioridades</option>
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baixa">Baixa</option>
+              </select>
+              <select id="serviceTypeFilter">
+                <option value="">Todos os tipos</option>
+                <option value="residencial">Residencial</option>
+                <option value="comercial">Comercial</option>
+                <option value="pos_obra">Pos-obra</option>
+              </select>
+              <select id="serviceTeamFilter"></select>
+              <input id="serviceDateFilter" type="date" title="Filtrar por data">
+            </div>
+            <button id="clearServiceFilters" class="secondary" type="button">Limpar filtros</button>
+          </div>
+          <div class="services-table-wrap">
+            <table class="services-table">
+              <thead>
+                <tr>
+                  <th>Data/Hora</th>
+                  <th>Cliente</th>
+                  <th>Servico</th>
+                  <th>Tipo</th>
+                  <th>Prioridade</th>
+                  <th>Preco</th>
+                  <th>Estado</th>
+                  <th>Acoes</th>
+                </tr>
+              </thead>
+              <tbody id="servicesBody"></tbody>
+            </table>
+          </div>
+        </article>
+        <aside class="card service-detail-panel" id="serviceDetailPanel">
+          <h3>Detalhe do Servico</h3>
+          <div id="serviceDetailEmpty" class="service-detail-empty">
+            Selecione uma ordem para ver detalhe.
+          </div>
+          <div id="serviceDetailContent" class="service-detail-content">
+            <h4 id="serviceDetailTitle">-</h4>
+            <div class="service-detail-meta">
+              <span class="muted">Cliente</span><strong id="serviceDetailClient">-</strong>
+              <span class="muted">Servico</span><strong id="serviceDetailTeam">-</strong>
+              <span class="muted">Data/Hora</span><strong id="serviceDetailStart">-</strong>
+              <span class="muted">Duracao</span><strong id="serviceDetailDuration">-</strong>
+              <span class="muted">Tipo</span><strong id="serviceDetailType">-</strong>
+              <span class="muted">Prioridade</span><strong id="serviceDetailPriority">-</strong>
+              <span class="muted">Estado</span><strong id="serviceDetailStatus">-</strong>
+              <span class="muted">Preco</span><strong id="serviceDetailPrice">-</strong>
+            </div>
+            <div>
+              <div class="muted">Notas</div>
+              <div id="serviceDetailExtras" class="service-detail-extras">-</div>
+            </div>
+            <div class="service-detail-actions">
+              <button id="serviceDetailStartBtn" type="button" class="secondary">Iniciar</button>
+              <button id="serviceDetailConcludeBtn" type="button" class="secondary">Concluir</button>
+              <button id="serviceDetailInvoiceBtn" type="button" class="secondary">Gerar fatura</button>
+              <button id="serviceDetailDeleteBtn" type="button" class="danger">Eliminar</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="frontend/js/api.js?v=20260420a"></script>
+  <script src="auth-session.js"></script>
+  <script src="servicos.js"></script>
+</body>
+</html>

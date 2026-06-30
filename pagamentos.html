@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagamentos | D&N Clean Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout dashboard-mode">
+    <aside class="dash-sidebar">
+      <div class="logo-card">
+        <img src="logo.jpg.jpg" alt="Logo D&N">
+        <div class="logo-name">D&N</div>
+        <div class="logo-sub">CLEAN SOLUTIONS</div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html?v=20260630b">Dashboard</a>
+        <a href="clientes.html?v=20260630b">Clientes</a>
+        <a href="servicos.html">Servicos</a>
+        <a class="active" href="pagamentos.html">Pagamentos</a>
+        <a href="gastos.html">Gastos</a>
+        <a href="salarios.html">Funcionarios</a>
+        <a href="frequencia-horaria.html">Frequencia Horaria</a>
+        <a href="folgas.html">Folgas & Extras</a>
+        <a href="orcamentos-ia.html">Orcamentos IA</a>
+        <a href="materiais.html">Materiais</a>
+        <a href="planos.html">Planos</a>
+      </nav>
+      <div class="toolbar">
+        <button id="logoutBtn" class="danger">Logout</button>
+      </div>
+    </aside>
+    <main class="dash-main">
+      <header class="dash-top simple-top">
+        <div class="clock-pill">
+          <strong>Pagamentos</strong>
+          <span id="sessionInfo" class="muted"></span>
+        </div>
+      </header>
+      <div id="mainFeedback" class="feedback"></div>
+      <div class="card payments-card">
+        <div class="payments-head">
+          <div>
+            <h3>Ingresos</h3>
+            <div class="muted">Pagamentos reais via endpoint /payments</div>
+          </div>
+          <div class="payments-actions">
+            <button id="savePaymentsBtn" type="button" class="secondary">Atualizar</button>
+            <button id="monthlyReportBtn" type="button" class="secondary">Relatório mensal</button>
+            <button id="addPaymentRowBtn" type="button">Novo pagamento</button>
+            <button id="clearPaymentsBtn" type="button" class="secondary">Limpar tudo</button>
+          </div>
+        </div>
+
+        <form id="paymentCreateForm" class="row" style="margin-bottom:12px; gap:8px; flex-wrap:wrap;">
+          <select id="paymentOrderId" required style="min-width:240px;"></select>
+          <input id="paymentMonth" type="month" required style="min-width:160px;">
+          <input id="paymentAmount" type="number" step="0.01" min="0" placeholder="Montante" required>
+          <select id="paymentMethod" required>
+            <option value="">Metodo</option>
+            <option value="cash">Cash</option>
+            <option value="card">Card</option>
+            <option value="transfer">Transfer</option>
+            <option value="mbway">MBWay</option>
+          </select>
+          <input id="paymentReference" type="text" placeholder="Referencia">
+          <button id="paymentSubmitBtn" type="submit">Registar pagamento</button>
+          <button id="cancelPaymentEditBtn" type="button" class="secondary" style="display:none;">Cancelar edicao</button>
+          <div id="paymentEditNotice" class="muted" style="width:100%; display:none;"></div>
+        </form>
+
+        <div class="payments-summary">
+          <div class="payments-total">
+            Total registado:
+            <strong id="paymentsTotal">0,00 EUR</strong>
+          </div>
+          <div class="payments-total">
+            Saldo em conta:
+            <strong id="paymentsBankBalance">0,00 EUR</strong>
+          </div>
+          <div class="payments-filters">
+            <select id="paymentsMonthFilter"></select>
+            <select id="paymentsClientFilter">
+              <option value="">Todos os clientes</option>
+            </select>
+            <select id="paymentsStatusFilter">
+              <option value="all">Todos</option>
+              <option value="pago">Ja pagou</option>
+              <option value="pendente">Falta pagar</option>
+            </select>
+          </div>
+          <div class="muted">Pagos: <strong id="paidCount">0</strong> | Falta pagar: <strong id="pendingCount">0</strong></div>
+        </div>
+        <div class="payments-table-wrap">
+          <table class="payments-sheet">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th>Metodo De Pago</th>
+                <th>Factura/Recibo</th>
+                <th>Monto</th>
+                <th>Concepto</th>
+                <th>Responsable</th>
+                <th>Observaciones</th>
+                <th>Estado</th>
+                <th>Acoes</th>
+              </tr>
+            </thead>
+            <tbody id="paymentsBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="monthlyReportModal" class="report-modal" hidden>
+        <div class="report-modal-backdrop" data-report-close></div>
+        <section class="report-modal-panel" role="dialog" aria-modal="true" aria-labelledby="monthlyReportTitle">
+          <div class="report-modal-head">
+            <div>
+              <div class="muted">Relatório mensal de pagamentos</div>
+              <h3 id="monthlyReportTitle">Relatório</h3>
+              <div id="monthlyReportMeta" class="muted"></div>
+            </div>
+            <div class="report-modal-actions">
+              <button type="button" class="secondary" data-report-print>Imprimir</button>
+              <button type="button" data-report-close>Fechar</button>
+            </div>
+          </div>
+          <div id="monthlyReportStats" class="report-stats"></div>
+          <div class="report-table-wrap">
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Cliente</th>
+                  <th>Método</th>
+                  <th>Referência</th>
+                  <th>Montante</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody id="monthlyReportBody"></tbody>
+            </table>
+          </div>
+          <div id="monthlyReportFooter" class="report-footer muted"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="frontend/js/api.js?v=20260420a"></script>
+  <script src="auth-session.js"></script>
+  <script src="pagamentos.js"></script>
+</body>
+</html>

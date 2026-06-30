@@ -1,0 +1,15 @@
+# Runtime and generated artifacts
+*.log
+backend/.env
+backend/dist/
+backend/node_modules/
+backend/storage/
+.local-postgres/
+
+# Local tooling
+.tools/
+node_modules/
+dist/
+
+# Local diagnostics
+dev-test*.log

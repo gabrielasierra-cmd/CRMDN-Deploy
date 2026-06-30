@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Folgas | D&N Clean Solutions</title>
+  <link rel="stylesheet" href="style.css?v=20260630a">
+</head>
+<body>
+  <div class="layout dashboard-mode">
+    <aside class="dash-sidebar">
+      <div class="logo-card">
+        <img src="logo.jpg.jpg" alt="Logo D&N">
+        <div class="logo-name">D&N</div>
+        <div class="logo-sub">CLEAN SOLUTIONS</div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html?v=20260630b">Dashboard</a>
+        <a href="clientes.html?v=20260630b">Clientes</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="pagamentos.html">Pagamentos</a>
+        <a href="gastos.html">Gastos</a>
+        <a href="salarios.html">Funcionarios</a>
+        <a href="frequencia-horaria.html">Frequencia Horaria</a>
+        <a class="active" href="folgas.html">Folgas & Extras</a>
+        <a href="orcamentos-ia.html">Orcamentos IA</a>
+        <a href="materiais.html">Materiais</a>
+        <a href="planos.html">Planos</a>
+      </nav>
+      <div class="toolbar">
+        <button id="logoutBtn" class="danger">Logout</button>
+      </div>
+    </aside>
+
+    <main class="dash-main leave-premium">
+      <header class="leave-header">
+        <div class="leave-header-copy">
+          <div class="leave-kicker">GESTÃO INTERNA</div>
+          <h1>Folgas & Extras</h1>
+          <p>Planeamento simples, leitura rápida e um fluxo visual sem distrações.</p>
+        </div>
+        <div id="sessionInfo" class="muted"></div>
+      </header>
+
+      <div id="mainFeedback" class="feedback"></div>
+
+      <section class="leave-kpi-grid card">
+        <article class="kpi">
+          <h4>Folgas</h4>
+          <strong id="kpiVacations">0</strong>
+        </article>
+        <article class="kpi">
+          <h4>Extras Registados</h4>
+          <strong id="kpiExtrasCount">0</strong>
+        </article>
+        <article class="kpi">
+          <h4>Horas Extra</h4>
+          <strong id="kpiExtrasHours">0.0h</strong>
+        </article>
+        <article class="kpi">
+          <h4>Top Colaborador</h4>
+          <strong id="kpiTop">-</strong>
+        </article>
+      </section>
+
+      <section class="card leave-block">
+        <div class="leave-block-head">
+          <div>
+            <h3>Ações rápidas</h3>
+            <p class="muted">Criar folga, registar extra ou adicionar colaborador.</p>
+          </div>
+        </div>
+        <div class="leave-ops-grid">
+          <article class="leave-pane">
+            <h4>Registar folga</h4>
+            <form id="vacationForm">
+              <div class="row">
+                <select id="vEmployee" required></select>
+                <input id="vDate" type="date" required>
+              </div>
+              <div class="row">
+                <input id="vShift" placeholder="Turno (ex: 08:00-17:00)">
+                <input id="vNote" placeholder="Nota (opcional)">
+              </div>
+              <button type="submit">Guardar folga</button>
+            </form>
+          </article>
+
+          <article class="leave-pane">
+            <h4>Registar extra</h4>
+            <form id="extraForm">
+              <div class="row">
+                <input id="xDate" type="date" required>
+                <select id="xEmployee" required></select>
+              </div>
+              <div class="row">
+                <input id="xHours" type="number" min="1" step="0.5" required placeholder="Horas extra">
+                <input id="xLocation" placeholder="Local">
+              </div>
+              <input id="xNote" placeholder="Nota (opcional)">
+              <button type="submit">Registar extra</button>
+            </form>
+          </article>
+
+          <article class="leave-pane">
+            <h4>Adicionar funcionário</h4>
+            <form id="employeeForm">
+              <div class="row">
+                <input id="eName" required placeholder="Nome">
+                <input id="eShift" placeholder="Turno padrão (ex: 09:00-18:00)">
+              </div>
+              <div class="row">
+                <input id="eDays" required placeholder="Dias de trabalho (ex: segunda,terça,quarta)">
+                <input id="eOff" placeholder="Política de folga">
+              </div>
+              <input id="eLocations" placeholder="Locais (ex: Nortada,Bellano)">
+              <button type="submit">Criar funcionário</button>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="card leave-block leave-panel">
+        <div class="leave-block-head">
+          <div>
+            <h3>Horários normais</h3>
+            <p class="muted">Escala base, dias e locais operacionais.</p>
+          </div>
+          <span class="leave-pill normal">Horários</span>
+        </div>
+        <div class="leave-table-wrap">
+          <table class="leave-table leave-employee-table">
+            <thead><tr><th>Funcionário</th><th>Dias</th><th>Turno</th><th>Folgas</th><th>Locais</th></tr></thead>
+            <tbody id="employeesBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="extrasTableSection" class="card leave-block leave-panel">
+        <div class="leave-block-head">
+          <div>
+            <h3>Calendário de extras</h3>
+            <p class="muted">Seleciona um dia para filtrar os registos.</p>
+          </div>
+          <span class="leave-pill extra">Extras</span>
+        </div>
+
+        <div class="leave-extras-grid">
+          <article class="leave-calendar-card">
+            <div class="leave-block-head compact">
+              <h4 id="calendarTitle">Calendário</h4>
+              <div class="toolbar">
+                <button type="button" id="prevMonthBtn" class="secondary">&lt;</button>
+                <button type="button" id="nextMonthBtn" class="secondary">&gt;</button>
+              </div>
+            </div>
+            <div id="extrasCalendar" class="extras-calendar"></div>
+            <div class="calendar-help muted">Dias com badge indicam extras registados.</div>
+          </article>
+
+          <article class="leave-extras-table">
+            <div class="leave-block-head compact">
+              <h4 id="extrasTableTitle">Todos os registos de extras.</h4>
+            </div>
+            <div class="leave-table-wrap">
+              <table class="leave-table">
+                <thead>
+                  <tr>
+                    <th>Data</th>
+                    <th>Funcionário</th>
+                    <th>Horas</th>
+                    <th>Local</th>
+                    <th>Nota</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody id="extrasTableBody"></tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card leave-block leave-panel">
+        <div class="leave-block-head">
+          <div>
+            <h3>Folgas registadas</h3>
+            <p id="vacationsTableTitle" class="muted">Resumo das folgas registadas.</p>
+          </div>
+          <span class="leave-pill">Folgas</span>
+        </div>
+        <div class="leave-table-wrap">
+          <table class="leave-table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Funcionário</th>
+                <th>Turno</th>
+                <th>Nota</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody id="vacationsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="frontend/js/api.js?v=20260420a"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firebase-sync.js"></script>
+  <script src="crm-common.js"></script>
+  <script src="auth-session.js"></script>
+  <script src="folgas.js"></script>
+</body>
+</html>

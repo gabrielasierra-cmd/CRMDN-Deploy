@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Mantem regra simples: utilizador autenticado pode gerir CRM.
+    match /clients/{docId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /cleaningServices/{docId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /teams/{docId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /schedules/{docId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /invoices/{docId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /materials/{docId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /plans/{docId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /vacations/{docId} {
+      allow read, write: if isSignedIn();
+    }
+
+    match /crm_data/{docId} {
+      // Regra temporaria para colocar o CRM a funcionar de imediato.
+      // Depois podemos voltar a restringir por auth.
+      allow read, write: if true;
+    }
+  }
+}
