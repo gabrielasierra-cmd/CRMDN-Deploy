@@ -103,7 +103,7 @@ export class MaterialsRepository {
         COUNT(*) FILTER (WHERE current_stock > min_stock AND current_stock <= (min_stock * 1.5))::int AS attention_count,
         COUNT(*) FILTER (WHERE current_stock > (min_stock * 1.5))::int AS normal_count,
         COALESCE(ROUND(AVG(consumo_mensal)::numeric, 2), 0) AS avg_consumption
-      FROM materials
+      FROM materials m
       WHERE ${where.join(" AND ")}
       `,
       params
