@@ -26,13 +26,12 @@ window.CRMApi = (() => {
     const configured = window.CRM_API_BASE_URL;
     if (configured && typeof configured === "string") return configured.replace(/\/$/, "");
 
-    if (
-      window.location &&
-      window.location.origin &&
-      /^https?:/i.test(window.location.protocol) &&
-      String(window.location.port || "") === "4000"
-    ) {
-      return `${window.location.origin.replace(/\/$/, "")}/api`;
+    if (window.location && window.location.origin && /^https?:/i.test(window.location.protocol)) {
+      const hostname = String(window.location.hostname || "").toLowerCase();
+      const isLocalhost = ["localhost", "127.0.0.1", "::1"].includes(hostname);
+      if (!isLocalhost || String(window.location.port || "") === "4000") {
+        return `${window.location.origin.replace(/\/$/, "")}/api`;
+      }
     }
 
     return DEFAULT_BASE_URL;
@@ -142,7 +141,7 @@ window.CRMApi = (() => {
         body: shouldSendBody ? JSON.stringify(body) : undefined
       });
     } catch (_networkError) {
-      const err = new Error("Nao foi possivel ligar ao servidor. Confirma se o npm run dev esta ativo.");
+      const err = new Error("Nao foi possivel ligar ao servidor. Tente novamente em instantes.");
       err.status = 0;
       throw err;
     }
@@ -189,7 +188,7 @@ window.CRMApi = (() => {
         body: shouldSendBody ? body : undefined
       });
     } catch (_networkError) {
-      const err = new Error("Nao foi possivel ligar ao servidor. Confirma se o npm run dev esta ativo.");
+      const err = new Error("Nao foi possivel ligar ao servidor. Tente novamente em instantes.");
       err.status = 0;
       throw err;
     }
@@ -234,7 +233,7 @@ window.CRMApi = (() => {
         body
       });
     } catch (_networkError) {
-      const err = new Error("Nao foi possivel ligar ao servidor. Confirma se o npm run dev esta ativo.");
+      const err = new Error("Nao foi possivel ligar ao servidor. Tente novamente em instantes.");
       err.status = 0;
       throw err;
     }
