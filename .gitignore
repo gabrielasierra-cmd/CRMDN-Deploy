@@ -13,3 +13,6 @@ dist/
 
 # Local diagnostics
 dev-test*.log
+
+# Sensitive local/database exports
+database/backups/
