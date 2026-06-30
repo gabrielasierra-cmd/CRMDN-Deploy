@@ -20,6 +20,10 @@ services:
         value: "true"
       - key: DATABASE_SSL_REJECT_UNAUTHORIZED
         value: "false"
+      - key: SUPABASE_POOLER_HOST
+        value: aws-1-eu-central-2.pooler.supabase.com
+      - key: SUPABASE_POOLER_PORT
+        value: "6543"
       - key: JWT_ACCESS_SECRET
         sync: false
       - key: JWT_REFRESH_SECRET

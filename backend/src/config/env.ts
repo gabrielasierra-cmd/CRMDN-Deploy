@@ -39,6 +39,8 @@ const envSchema = z.object({
   CORS_ORIGIN: z.string().trim().default("http://localhost:5500"),
   DATABASE_SSL: booleanFromEnv(false),
   DATABASE_SSL_REJECT_UNAUTHORIZED: booleanFromEnv(true),
+  SUPABASE_POOLER_HOST: optionalTrimmedString,
+  SUPABASE_POOLER_PORT: z.coerce.number().int().positive().default(6543),
   SHARED_ORGANIZATION_NAME: z.string().trim().default("Shared Workspace"),
   OPENAI_API_KEY: optionalTrimmedString,
   OPENAI_MODEL: z.string().trim().default("gpt-5.5"),

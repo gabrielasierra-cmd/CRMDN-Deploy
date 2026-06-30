@@ -1,8 +1,24 @@
 import { Pool } from "pg";
 import { env } from "../config/env";
 
+function databaseUrl(): string {
+  if (!env.SUPABASE_POOLER_HOST) return env.DATABASE_URL;
+
+  const url = new URL(env.DATABASE_URL);
+  const match = url.hostname.match(/^db\.([a-z0-9]+)\.supabase\.co$/i);
+  if (!match) return env.DATABASE_URL;
+
+  const projectRef = match[1];
+  if (!url.username.includes(".")) {
+    url.username = `${url.username}.${projectRef}`;
+  }
+  url.hostname = env.SUPABASE_POOLER_HOST;
+  url.port = String(env.SUPABASE_POOLER_PORT);
+  return url.toString();
+}
+
 export const pool = new Pool({
-  connectionString: env.DATABASE_URL,
+  connectionString: databaseUrl(),
   ssl: env.DATABASE_SSL
     ? {
         rejectUnauthorized: env.DATABASE_SSL_REJECT_UNAUTHORIZED
